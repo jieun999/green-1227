@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 선택자</title>
+    <style>
+        /* .title, .sub, .sub2 {
+            color: red;
+        } */
+        h1[class]{color: red;}
+        img[alt]{width: 100px;}
+        /* p[class="abc"]{color: red;} */ 
+        /* p[class~="abc"]{color: red;} */
+        /* p[class|="abc"]{color: red;} */
+        /* p[class^="abc"]{color: red;} */
+        /* p[class^="abc"]{color: red;} */
+        /* p[class$="abc"]{color: red;} */
+        p[class*="abc"]{color: red;}
+        a[href^="mailto"]{color: red;}
+        /*p.abc  p.abc.on  p.abc  p.on */
+    </style>
+
+</head>
+<body>
+    <h1>제목태그</h1>
+    <h1 class="title">제목태그</h1>
+    <h1 class="sub">제목태그</h1>
+    <h1 class="sub2">제목태그</h1>
+    <img src="./images/cinema.png" alt=""/>
+    <img src="./images/cinema.png" />
+    <p class="abc"> lass명이 유일하게 abc인 p요소</p>
+    <p class="abc on"> lass명이 유일하게 abc와 on인 p요소</p>
+    <p class="abc-on"> lass명이 유일하게 abc와 on인 p요소</p>
+    <p class="abcon"> lass명이 유일하게 abc로 끝나는 요소</p>
+    <p class="onabcon"> lass명이 abc가 포함되는 요소</p>
+    <a href="mailto: leg102511@naver.com">링크</a>
+</body>
+</html>
