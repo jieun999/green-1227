@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 웹상에서 폰트 쓰는 법
+    1. .woff로 변환하기
+    2. 코드 직접 뽑아오기 ex) 구글폰트-> Get embed code 
+    스타일에 넣는 방법과 헤드에 넣는 방법이 있음 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Noto+Sans+KR:wght@100..900&display=swap");
+      @font-face {
+        font-family: Roboto;
+        src: url(./webfonts/Roboto_Condensed-Regular.woff) format("woff");
+      }
+      @font-face {
+        font-family: CookieRun;
+        src: url(./webfonts/CookieRun_Regular.otf) format("opentype");
+        /* otf폰트는 포멧(format)을 "opentype"으로 지정한다 */
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .one {
+        font-family: Arial, "돋움", sans-serif;
+        /* 돋움 폰트가 적용이 안될 경우 '' 또는 ""로 묶거나 영문(Dotum)으로 쓴다. */
+      }
+      .two {
+        font-family: "Times New Roman", Times, 바탕, serif;
+      }
+      .three {
+        font-family: cursive;
+      }
+      .four {
+        font-family: Pretendard;
+      }
+      .five {
+        font-family: Roboto, 궁서, sans-serif;
+      }
+      .six {
+        font-family: "Noto Sans KR", serif;
+        font-weight: 900;
+      }
+      .seven {
+        font-family: "Cedarville Cursive", serif;
+      }
+      .eight {
+        font-family: CookieRun;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="num">
+      <p class="one">문단태그 ascdABCD 12345</p>
+      <p class="two">문단태그 ascdABCD 12345</p>
+      <p class="three">문단태그 ascdABCD 12345</p>
+      <p class="four">문단태그 ascdABCD 12345</p>
+      <p class="five">문단태그 ascdABCD 12345</p>
+      <p class="six">문단태그 ascdABCD 12345</p>
+      <p class="seven">문단태그 ascdABCD 12345</p>
+      <p class="eight">문단태그 ascdABCD 12345</p>
+    </div>
+  </body>
+</html>
