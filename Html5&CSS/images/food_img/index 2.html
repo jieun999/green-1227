@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{list-style: none;}
+        #wrap{
+            width: 800px;
+            margin: 0 auto;
+            font-size: 0;
+            /* 2. 폰트 사이즈가 들어가는 이유
+            > 기본적으로 글자를 넣어야하므로 자동으로 공백이 띄워지기 때문 */
+        }
+        .head {
+            height: 24px;
+        }
+        .nav {
+            height: 13px;
+            overflow: hidden;
+            /* 1. 우선적으로 공백은 이미지의 높이값을 준 이후,
+            그래도 공백이 남으면 폰트 사이즈를 0으로 만든다. */
+        }
+        .nav > div {
+            float: left;
+        }
+        .nav > div:nth-child(2) {
+            font-size: 10px;
+            margin-left: 150px;
+        }
+        .nav > div:nth-child(2) ul {
+            overflow: hidden;
+        }
+        .nav > div:nth-child(2) ul il {
+            float: left;
+        }
+        .nav > div:nth-child(2) ul li a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #000;
+            text-transform: uppercase;
+        }
+        .nav > div:nth-child(2) ul li a:hover {
+            text-decoration: underline;
+            color: blue;
+        }
+        .nav > div:last-child {
+            float: right;
+        }
+        .con {
+            clear: both;
+            height: 744px;
+        }
+        .con > div {
+            float: left;
+        }
+        .con > div:nth-child(3) div {
+            margin-top: 150px ;
+        }
+        .con > div .number{
+            border-left: 1 solid #ccc ;
+        }
+        .con > div .number div p:first-child {
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+            background-color: #fddee1;
+            border-radius: 50% ;
+            text-align: center;
+            line-height:100px;
+            font-size: 32px;
+        }
+        .con > div .number p:last-child {
+            width: 145px;
+            background-color: #fddee1;
+            font-size: 14px;
+            margin: 10px auto 0;
+            text-transform: uppercase;
+            padding: 5px 0 5px 10px;
+            box-sizing: border-box;
+        }
+        .foot{
+            clear: both;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+        <div class="head">
+            <p><img src="./top.gif" alt=""></p>
+        </div>
+        <div class="nav">
+            <div>
+                <p><img src="./food_01.gif" alt=""></p>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">augst / 2003 /</a></li>
+                    <li><a href="#">summer</a></li>
+                    <li><a href="#">special</a></li>
+                    <li><a href="#">e·magzin</a></li>
+                </ul>
+            </div>
+            <div>
+                <p><img src="./food_02.gif" alt=""></p>
+            </div>
+        </div>
+        <div class="con">
+            <div>
+                <p><img src="./note.gif" alt=""></p>
+            </div>
+            <div>
+                <p><img src="./image.gif" alt=""></p>
+            </div>
+            <div>
+                <div>
+                    <div class="namber">
+                        <p>08</p>
+                        <p>food&dite</p>
+                    </div>
+                <p><img src="./navigation.gif" alt=""></p>
+                </div> 
+            </div>
+        <div>
+            p><img src="./page.gif" alt=""></p>
+        </div> 
+        </div>
+        <div class="foot">
+            <p><img src="./bottom.gif" alt=""></p>
+        </div>
+    </div>
+  </body>
+</html>

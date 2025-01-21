@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+        .con>div{
+            margin: 0 auto;
+            float: left;
+        }
+        con div:nth-child(3){
+            margin-top: 100px;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+        <div class="top">
+            <p>
+                <img src="./top.gif" alt="">
+            </p>
+        </div>
+        <div class="con">
+            <div>
+                <img src="./note.gif" alt="">
+            </div>
+            <div>
+                <img src="./directory.gif" alt="">
+            </div>
+            </div>
+            <div>
+                <img src="./image.gif" alt="">
+            </div>
+            <div>
+                <img src="./number.gif" alt="">
+            </div>
+            <div>
+                <img src="./navigation.gif" alt="">
+            </div>
+            <div>
+                <img src="./page.gif" alt="">
+            </div>
+        </div>
+        <div class="bottom">
+            <p>
+                <img src="./bottom.gif" alt="">
+            </p>
+        </div>
+        </div>
+    </div>
+  </body>
+</html>

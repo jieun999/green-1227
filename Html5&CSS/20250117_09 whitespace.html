@@ -6,18 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>white space</title>
     <style>
+        div{
+            width: 500px;
+            border: 1px solid;
+            margin: 10px;
+        }
+        .normal{white-space:normal ;}
+        .nowrap{white-space:nowrap ; overflow: hidden; text-overflow:ellipsis ;}
+        .pre{white-space:pre ;}
+        .prewrap{white-space:pre-wrap ;}
+        .preline{white-space:pre-line; visibility:visible ;}
     </style>
   </head>
   <body>
+    <div>L        orem I
+        psum is simply dummy text of the printing and typesetting industry.</div>
+
     <div class="normal">L        orem I
-        psum is simply dummy text of the printing and typesetting industry.</div>
+        psum is simply dummy text of the printing and typesetting industry.
+    </div>
+
     <div class="nowrap">L        orem I
-        psum is simply dummy text of the printing and typesetting industry.</div>
+        psum is simply dummy text of the printing and typesetting industry.
+    </div>
+
     <div class="pre">L        orem I
-        psum is simply dummy text of the printing and typesetting industry.</div>
+        psum is simply dummy text of the printing and typesetting industry.
+    </div>
+
     <div class="prewrap">L        orem I
-        psum is simply dummy text of the printing and typesetting industry.</div>
+        psum is simply dummy text of the printing and typesetting industry.
+    </div>
+
     <div class="preline">L        orem I
-        psum is simply dummy text of the printing and typesetting industry.</div>
+        psum is simply dummy text of the printing and typesetting industry.
+    </div>
   </body>
 </html>

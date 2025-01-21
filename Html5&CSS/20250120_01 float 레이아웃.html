@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p:first-child {
+        width: 1200px;
+        height: 100px;
+        float: none;
+        background-color: red;
+      }
+      p:nth-child(2){
+        width: 1200px;
+        height: 100px;
+        background-color: blue;
+      }
+      p:nth-child(3){
+        width: 20%;
+        height: 500px;
+        float: left;
+        background-color: green;
+      }
+      p:nth-child(4){
+        width: 70%;
+        height: 500px;
+        background-color: pink;
+      }
+      p:nth-child(5){
+        width: 10%;
+        height: 500px;
+        float: right;
+        background-color:green;
+      }
+      p:last-child{
+        width: 1200px;
+        height: 100px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <p>가로크기는 1200px 세로크기는 100px</p>
+    <p>가로크기는 1200px 세로크기는 100px</p>
+    <p>가로크기는 20% 세로크기는 500px</p>
+    <p>가로크기는 70% 세로크기는 500px</p>
+    <p>가로크기는 10% 세로크기는 500px</p>
+    <p>가로크기는 1200px 세로크기는 100px</p>
+  </body>
+</html>
