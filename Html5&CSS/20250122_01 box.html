@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        p{
+            /* padding: 200px; */
+            height: 200px;
+            /* background-image: url(./images/img_flwr.gif), url(./images/img_flwr.gif),url(./images/paper.gif);
+            background-size: 100px, 100px;
+            background-repeat:no-repeat, no-repeat, repeat;
+            background-position: 0 0, right bottom, left top ; */
+            background:
+            url(./images/img_flwr.gif) 0 0/50px no-repeat,
+            url(./images/img_flwr.gif) right bottom/100px no-repeat,
+            url(./images/paper.gif) left top/100px repeat ;
+            /* 같은 서식에 여러 코드를 넣을 경우, 첫번째 쓴 코드가 앞으로 온다. */
+            background-color: lightcoral;
+            /* 가장 마지막에 적은 서식이 앞에 올 가능성이 높음 */
+        }
+    </style>
+</head>
+<body>
+    <p></p>
+</body>
+</html>

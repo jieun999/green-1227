@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        @font-face{
+            font-family: PretendardL;
+            src: url(./webfonts/Pretendard-Light.woff) format("woff");
+        }
+        @font-face{
+            font-family: PretendardB;
+            src: url(./webfonts/Pretendard-Bold.woff) format("woff");
+        }
+        .con{
+            padding: 120px 0;
+            margin: 3000px 0;
+            background: url(https://www.digitalworks.co.kr/dgresources/front/images/main/renewal/bt_content_dscrip.jpg) center/cover fixed;
+            color: #fff;
+            /* 보통의 태그는 부모의 스타일을 따라가지만
+            a태그는 지정된 컬러가 있기 때문에 따로 서식을 만들어줘야한다. */
+            font-family: PretendardL;
+            text-align: center;
+        }
+        .con h3{
+            font-size: 18px;
+            font-weight: normal;
+        }
+        .con h1{
+            margin: 20px 0;
+            font-size: 36px;
+        }
+        .con a{
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            border: 1px solid #fff;
+            padding: 10px 20px;
+            /* width: 150px; */
+            /* 블록태그는 가로를 전부 사용한다.
+            > 그래서 한 글자를 쓰더라도 바로 아래문단에 글자가 들어감.
+            a태그는 인라인태그이다.*/
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <h3>Work with us</h3>
+        <h1>디지털웍스에 문의하세요.</h1>
+        <p><a href="#">문의하기</a></p>
+    </div>
+</body>
+</html>
