@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            /* border: 1px solid red; */
+            border-collapse:collapse;
+        }
+        td{
+            border: 1px solid grey;
+            padding: 10px;
+        }
+        tr:first-child{background: #ccc; text-align: center;}
+    </style>
+</head>
+<body>
+    <table>
+        <trhead class="tea">
+            <td colspan="2">지역별 홍차</td>
+        </trhead>
+        <tbody class="china">
+            <tr>
+                <td rowspan="4">중국</td>
+            </tr>
+            <tr>
+                <td>정산소종</td>
+            </tr>
+            <tr>
+                <td>기문</td>
+            </tr>
+            <tr>
+                <td>운남</td>
+            </tr>
+        </tbody>
+        <tfoot class="india">
+            <tr>
+                <td rowspan="5">인도 및 스리랑카</td>
+            </tr>
+            <tr>
+                <td>아삼</td>
+            </tr>
+            <tr>
+                <td>실론</td>
+            </tr>
+            <tr>
+                <td>다질링</td>
+            </tr>
+            <tr>
+                <td>닐기리</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
