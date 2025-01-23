@@ -38,6 +38,11 @@
         }
         .con a{
             display: inline-block;
+            /*inline의 특징과 block의 특징을 모두 가진 요소.
+            1. 줄바꿈이 이루어지지 않는다.
+            2. block처럼 width와 height를 지정 할 수 있다.
+            3. 만약 width와 height를 지정하지 않을 경우, inline과 같이 컨텐츠만큼 영역이 잡힌다.
+            👉 즉 inline의 성질을 가지면서 동시에 사용자가 원하는 대로 모형을 꾸밀 수 있다.*/
             color: #fff;
             text-decoration: none;
             font-size: 14px;
@@ -46,7 +51,8 @@
             /* width: 150px; */
             /* 블록태그는 가로를 전부 사용한다.
             > 그래서 한 글자를 쓰더라도 바로 아래문단에 글자가 들어감.
-            a태그는 인라인태그이다.*/
+            a태그는 인라인태그이기 때문에 블록을 부모로 가진 서식이 적용되지 않기 때문에
+            inline-block을 사용하여 같은 속성값을 가지도록 하면서 사용자가 원하는 대로 꾸미게 할 수 있다.*/
         }
     </style>
 </head>

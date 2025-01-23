@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        @font-face{
+            font-family: PretendardL;
+            src: url(./webfonts/Pretendard-Light.woff) format("woff");
+        }
+        @font-face{
+            font-family: PretendardB;
+            src: url(./webfonts/Pretendard-Bold.woff) format("woff");
+        }
+        .con{
+            height: 1020px;
+            margin-bottom: 3000px;
+            background: #ccc;
+            font-family: PretendardB;
+            position: relative;
+        }
+        .con h1{ 
+            position: sticky;
+            top:0 ;
+            /* sticky: 스크롤시 "지정 지점"에서 요소를 고정시킨다.
+            이 서식에선 h1이 고정 지점에서 특정 높이(top:0)로 갔을 때 같이 올라가도록 설계했음. */
+            padding: 240px 0 160px;
+            font-size: 64px;
+            text-align: center;
+            z-index: 1;
+            /* position: absolutef를 사용하면 레이아웃 순서가 달아질 수 있다.
+            z-index는 포토샵으로 따지면 레이어이며, 지정수치가 높을 수록 서식이 앞에 위치한다간다.
+             */
+        }
+        .con .bg{
+            position: absolute;
+            width: 100%;
+            height: 1024px;
+            background: url(https://www.hmglobal.com/sustainability/assets/images/sub/sub-visual-sustainability-background.jpg) center/cover fixed;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>Sustainability</h1> -->
+    <div class="con">
+        <h1>Sustainability</h1>
+        <div class="bg"></div>
+    </div>
+</body>
+</html>

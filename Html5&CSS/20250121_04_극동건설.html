@@ -60,6 +60,11 @@
             2. left, top, right, bottom 속성으로 위치 지정할 수 있음.
             3. 부모 박스를 기준으로 위치를 지정함.
 
+            position: absolute를 주는 이유는 부모 요소 내부에 속박되지 않고, 독립적으로 사용하기 위해서이다.
+            
+            단, 상위 요소 중에 position 속성이 relative인 요소가 있다면, 그 중 가장 가까운 요소의 내부에서만 요소를 자유롭게 배치할 수 있다.
+            absolute 사용 시 relative를 absolute의 부모로 설정할 경우 전체 화면이 아닌 해당 상위 요소(relative)를 기준으로 offset 속성(top, left, bottom, right)이 적용된다.
+
             position: relative
             1. left, top, right, bottom 속성으로 위치 지정할 수 있음.
             2. position: absolute로 지정된 요소의 부모 요소 역할을 할수도 있음
