@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        p{
+            width: 500px;
+            height: 200px;
+            margin: 20px 0;
+        }
+        p{
+            width: 100px;
+            height: 100px;
+            background: #ccc;
+            margin: 20px;
+        }
+        div p:first-child{
+            transform: translate(100px,-50px);
+        }
+        div p:nth-child(2){
+            transform: translate(500px) scale(2, 0.5);
+        }
+        div p:nth-child(3){
+            transform: scale(2, 0.5) translate(500px);
+        }
+        /* 두 서식의 결과값이 다른 이유는 순서에 있다.
+        두번째 차일드는 크기가 100px인 상태에서 500px로 이동한 후 크기(scale)가 커진 것이고
+        세번째 차일드는 크기(scale)가 커진 상태에서 500px만큼 이동한 것이다. */
+        div  p:nth-child(4){
+            transform: rotateY(20deg);
+        }
+        div p:nth-child(5){
+            transform: scaleX(3) translate(100px) ;
+        }
+        div p:nth-child(6){
+            transform: rotate(30deg);
+        }
+        div p:nth-child(7){
+            transform: rotate(30deg);
+        }
+        /* 이동, 스케일, 회전 전부 지정하지 않으면 요소의 중심에서부터 시작한다. */
+        section{
+            width: 500px;
+            height: 500px;
+            border: 1px solid;}
+        section p{
+            width: 100px;
+            height: 100px;
+        }
+        section p:nth-child(1){
+            background: red;
+            transform: translate(0px);
+        }
+        section p:nth-child(2){
+            background: red;
+            transform: translate(100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p>회전</p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    <div class="b">
+        <section>
+            <p></p>
+            <p></p>
+        </section>
+    </div>
+</body>
+</html>

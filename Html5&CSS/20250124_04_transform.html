@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clearfix::before,.clearfix::after{
+            content: "";
+            display: block;
+        }
+        .clearfix::after{clear: both;}
+        /* 위 두개의 서식을 사용하면 차일드의 크기가 변화하는 것에 맞춰 부모요소가 같이 늘어나며 높이값을 찾을 수 있다. */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 1200px;
+            margin: 50px auto;
+            list-style: none;
+            border: 1px solid;
+            /* overflow: hidden;
+            overflow: hidden;을 사용하면 부모의 높이값을 찾을 수 있지만, 차일드 요소도 같이 가려진다. */
+            /* height: 350px;
+            height를 사용하면 부모의 높표값이 고정되기 때문에 '그린컴퓨터아트학원'의 글자를 늘려도 부모의 높이값이 차일드와 같이 커지지 않는다. */
+        }
+        ul li{
+            float: left;
+            width: 25%;
+            border: 1px solid #ccc;
+            padding: 10px 10px 20px;
+            box-sizing: border-box;
+            box-shadow: 10px 10px 10px #aaa;
+            background: #fff;
+        }
+        ul li p:first-child{
+            height: 250px;
+        }
+        ul li p img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;}
+
+        ul li p:last-child{
+            text-align: center;
+            padding-top: 20px;
+        }
+        ul li:nth-child(2n){
+            transform: rotate(5deg);
+        }
+        ul li:nth-child(2n+1){
+            transform: rotate(-5deg);
+        }
+    </style>
+</head>
+<body>
+    <ul class="clearfix">
+        <li>
+            <p><img src="./images/photo1.jpg" alt=""></p>
+            <p>그린컴퓨터아트학원</p>
+        </li>
+        <li>
+            <p><img src="./images/photo2.jpg" alt=""></p>
+            <p>그린컴퓨터아트학원</p>
+        </li>
+        <li>
+            <p><img src="./images/photo3.jpg" alt=""></p>
+            <p>그린컴퓨터아트학원</p>
+        </li>
+        <li>
+            <p><img src="./images/photo4.jpg" alt=""></p>
+            <p>그린컴퓨터아트학원</p>
+        </li>
+    </ul>
+</body>
+</html>

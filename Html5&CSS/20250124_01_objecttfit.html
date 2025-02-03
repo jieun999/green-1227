@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        p{
+            border: 2px solid red;
+            width: 500px;
+            height: 200px;
+            /* overflow: hidden; */
+            /* object-fit와 overflow: hidden 두 속성 전부 차일드가 부모의 크기를 넘치지 않게 해주는 속성이지만, overflow: hidden을 사용할 경우 차일드의 위치를 조정할 수 없다.*/
+        }
+        p img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* object-position: right top; */
+            /* object-fit를 사용하여 이미지를 삽입하고 object-position로 원하는 위치에 이미지를 넣는다. */
+        }
+        div{
+            width: 500px;
+            height: 200px;
+            background: url(./images/photo1.jpg) center/cover;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <img src="./images/photo1.jpg" alt="photo">
+    </p>
+    <div></div>
+</body>
+</html>
