@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{
+            list-style: none;
+        }
+        ul.con{
+            border: 1px solid;
+            width: 1180px;
+            height: 420px;
+            margin: 80px auto;
+            justify-content: space-between;
+            overflow: hidden;
+            display: flex;
+        }
+        ul.con li{
+            /* border-radius: 15px; */
+            width:280px;
+            height: 280px;
+            background: #ccc;
+            transition: 0.5s;
+        }
+        ul.con li:hover{
+            width: 580px;
+        }
+        /* ul.con li:nth-child(1){background: url(https://www.starfield.co.kr/assets/images/starfield/main-library-img01.jpg) center/cover;}
+        ul.con li:nth-child(2){background: url(https://www.starfield.co.kr/assets/images/starfield/main-library-img02.jpg) center/cover;}
+        ul.con li:nth-child(3){background: url(https://www.starfield.co.kr/assets/images/starfield/main-library-img03.jpg) center/cover;} */
+    </style>
+</head>
+<body>
+    <ul class="con">
+        <li>
+            <div class="library">
+                <p><img src="https://www.starfield.co.kr/assets/images/starfield/main-library-img01.jpg" alt=""></p>
+                <p>별마당 도서관</p>
+                <p>휴식과 만남, 그리고 책을 주제로 소통하는 문화 감성 공간</p>
+            </div>
+        </li>
+        <li>
+            <div class="kids">
+                <p><img src="https://www.starfield.co.kr/assets/images/starfield/main-library-img02.jpg" alt=""></p>
+                <p>별마당 키즈</p>
+                <p>휴식과 만남, 그리고 책을 주제로 소통하는 문화 감성 공간</p>
+            </div>
+        </li>
+        <li>
+            <div class="talk">
+                <p><img src="https://www.starfield.co.kr/assets/images/starfield/main-library-img03.jpg" alt=""></p>
+                <p>강연&공연</p>
+                <p>휴식과 만남, 그리고 책을 주제로 소통하는 문화 감성 공간</p>
+            </div>
+        </li>
+      </ul>
+</body>
+</html>
