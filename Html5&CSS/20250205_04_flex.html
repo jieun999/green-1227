@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+    *{margin: 0;padding: 0;}
+    body{}
+    /* .flex{
+        background: #ccc;
+        margin: 20px;
+        padding: 20px;
+        display: flex;
+    } */
+    p{
+        width: 500px;
+        height: 500px;
+        background: red;
+        margin: 20px;
+        position: relative;
+    }
+    p span{
+        background: yellow;
+    }
+    p.a01{
+        position: absolute;
+        left: 100%;top: 100%;
+        transform: translate(-100%, -100%);
+    }
+    p.a02{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    </style>
+  </head>
+  <body>
+    <p class="a01"><span>가운데</span></p>
+    <p class="a02"><span>가운데</span></p>
+  </body>
+</html>

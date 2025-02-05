@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      ul.con{
+        width: 1720px;
+        height: 630px;
+        margin: 50px auto;
+        display: flex; 
+      }
+      ul.con li{
+        background: url(https://www.samsungshi.com/images/main/mSolution_bg_01.jpg)center/cover;
+        width: 344px;
+        height: 100%;
+        transition: 0.5s;
+        box-sizing: border-box;
+        color: white;
+      }
+      h1{
+        font-weight:normal;
+      }
+      li.product:not(:hover) {
+        padding: 250px 0px;
+        text-align: center;}
+
+      ul.con li:hover{
+        width: 688px;
+        font-size: 120%;
+        padding: 200px 50px;
+        background-position: left;
+      }
+      li div.title a{
+        color: #fff;
+      }
+      li div.title p{
+        padding: 30px 0;
+        opacity: 0;
+        display: none;
+      }
+      li:hover div.title p{
+        opacity: 1;
+        display: block;
+      }
+      li div.title a{
+        padding: 30px 0;
+        opacity: 0;
+        display: none;
+      }
+      li:hover div.title a{
+        opacity: 1;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="con">
+      <li class="product">
+        <div class="title">
+          <h1>제품 | 서비스</h1>
+          <p>
+            끊임없는 제품 혁신과<br>
+            엔지니어링 역량 강화
+          </p>
+          <a href="#">자세히</a>
+        </div>
+      </li>
+      <li class="product">
+        <div class="title">
+          <h1>제품 | 서비스</h1>
+          <p>
+            끊임없는 제품 혁신과<br>
+            엔지니어링 역량 강화
+          </p>
+          <a href="#">자세히</a>
+        </div>
+      </li>
+      <li class="product">
+        <div class="title">
+          <h1>제품 | 서비스</h1>
+          <p>
+            끊임없는 제품 혁신과<br>
+            엔지니어링 역량 강화
+          </p>
+          <a href="#">자세히</a>
+        </div>
+      </li>
+      <li class="product">
+        <div class="title">
+          <h1>제품 | 서비스</h1>
+          <p>
+            끊임없는 제품 혁신과<br>
+            엔지니어링 역량 강화
+          </p>
+          <a href="#">자세히</a>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>
