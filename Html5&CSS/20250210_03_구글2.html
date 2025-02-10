@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* input[type="search"]:hover{border-color: transparent;} */
+        /* img{width: 300px;} */
+        input[type="search"]{
+            position: relative;
+            width: 750px;
+            height: 48px;
+            padding: 12px 20px 12px 40px;
+            border-radius: 50px;
+            border: 1px solid #ccc;
+            background: url(./images/searchicon.png);
+            background-repeat: no-repeat;
+            background-position: 10px;
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+        }
+        .google input[type="search"]{
+            background-image:url(./images/g_camera.svg), url(./images/g_mic.svg),url(./images/g_tia.png) ;
+            background-position: 98% 0, 90% 0, 85% 0;
+            box-sizing: 40px, 20px, 15px;
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <form action="" method="" class="google">
+        <input type="search" placeholder="Search..." onfocus="this.placeholder=''">
+    </form>
+</body>
+</html>

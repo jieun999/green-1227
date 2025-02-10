@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :focus{outline: none;}
+        input[type="search"]{
+            position: relative;
+            width: 750px;
+            height: 48px;
+            padding: 12px 20px 12px 40px;
+            border-radius: 50px;
+            border: 1px solid #ccc;
+            background: url(./images/searchicon.png);
+            background-repeat: no-repeat;
+            background-position: 10px;
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+        }
+        input[type="search"]:focus{
+            border-color: transparent;
+        }
+        .icon{
+            width: 24px;
+            padding: 0 8px;
+            position: absolute;
+            
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <div class="icon">
+        <div class="tia">
+            <img src="./images/g_tia.png">
+        </div>
+        <div class="mic">
+            <img src="./images/g_mic.svg">
+        </div>
+        <div class="camera">
+            <img src="./images/g_camera.svg">
+        </div>
+    </div>
+    <form action="" method="">
+        <input type="search" placeholder="Search..." onfocus="this.placeholder=''">
+    </form>
+</body>
+</html>

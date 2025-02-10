@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        :focus{outline: none;}
+        ul{list-style: none;}
+        div{
+            width: 1912px;
+            height: 60px;
+            padding: 6px;
+            justify-content: space-between;
+        }
+        div.nav, ul.warp, ul.app{
+            display: flex;
+        }
+        div ul.warp li{
+            margin: 5px;
+            padding: 5px;
+        }
+        div ul.app li{
+            margin: 5px;
+            padding: 5px;
+        }
+        ul.app li p{
+            width: 24px;
+        }
+        ul.app li:last-child{
+            width: 60px;
+            background: #0b57d0;
+            border-radius: 100px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul class="warp">
+            <li>Google 정보</li>
+            <li>스토어</li>
+        </ul>
+        <ul class="app">
+            <li>Gmail</li>
+            <li>이미지</li>
+            <li><p><img src="./images/g_app.svg" alt="app"></p></li>
+            <li>로그인</li>
+        </ul>
+    </div>
+</body>
+</html>
