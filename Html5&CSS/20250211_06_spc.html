@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        
+        .main{
+            width: 1795px;
+            height: 887px;
+            display: flex;
+            gap: 20px;
+        }
+        .left img{
+            width: 888px;
+        }
+        .right{
+            width: 892px;
+            height: 887px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            
+        }
+        .right ul li p{
+            
+        }
+        .right ul li:nth-child(2n){
+            margin-top: 18px;
+        }
+        /* .right ul li p{
+        }*/
+        .right img{
+            width: calc(892px-40px/2);
+            height: 433px;
+            border-radius: 20px;
+            /* height: calc(887px-40px/4); */
+        } 
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <ul>
+                <il>
+                    <img src="https://www.spc.co.kr/img/front/main/eat.webp" alt="">
+                    <div class="txt">
+                        <p>먹고</p>
+                        <p>마시고</p>
+                        <p>즐기자</p>
+                    </div>
+                </il>
+            </ul>
+        </div>
+        <div class="right">
+            <ul>
+                <li>
+                    <p><img src="https://www.spc.co.kr/img/front/main/eat.webp" alt=""></p>
+                </li>
+                <li>
+                    <p><img src="https://www.spc.co.kr/files/brand/2024/06/d96a9ce4-a1a7-42a1-836f-fa4580f21f58.jpg" alt=""></p>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <p><img src="https://www.spc.co.kr/img/front/main/eat.webp" alt=""></p>
+                </li>
+                <li>
+                    <p><img src="https://www.spc.co.kr/files/brand/2024/06/b59cd9b1-6acb-4deb-8d6a-7999988968bb.jpg" alt=""></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
