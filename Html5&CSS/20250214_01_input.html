@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #menu{display: none;}
+        #menu:checked ~ p.down{
+            display: none;
+        }
+        /* 형제선택자를 사용할 경우, 자신보다 아래에 있는 차일드만 적용되며
+        위에있는 차일드는 적용되지 않는다.
+        위에있는 차일드도 같이 효과를 주고 싶다면 자바스크립트를 이용해야한다. */
+    </style>
+</head>
+<body>
+    <p class="up">클릭이벤트</p>
+    <input type="checkbox" id="menu">
+    <label for="menu">이미지 보이기/숨기기</label>
+    <p class="down"><img src="./images/photo1.jpg" alt=""></p>
+</body>
+</html>

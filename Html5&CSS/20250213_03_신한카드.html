@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+
+        .main{
+            margin: 0 auto;
+            width: 1200px;
+            height: 1949px;
+        }
+        div.title h1{
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+        div.title span::after{
+            content: "";
+            position: absolute;
+            top: 17px;
+            left: 45px;
+            bottom: 14px;
+            width: 1px;
+            background-color: #ccc;
+        }
+        div.title span{
+            color: #356cff;
+            padding: 10px; 
+            margin: 50px auto;
+            text-align: center;
+            position: relative;
+        }
+        div.title p{
+            font-size: 16px;
+            font-weight: bold;
+        }
+        div.txt{
+            border: 1px solid #ccc;
+            border-radius: 15px;
+        }
+        div.title h3{
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+        div.con{
+            margin-top: 48px;
+            width: 100%;
+        }
+        div.con div.v{
+            padding: 10px;
+            width: 100%;
+            display: flex;
+            text-align: center;
+            box-sizing: border-box;
+            gap: 16px;
+        }
+        div.txt{
+            flex: 1;
+            padding: 32px;
+            word-break: keep-all;
+        }
+        div.txt h2{
+            margin: 32px 0 16px;
+            color: #011b6a;
+            font-size: 24px;
+        }
+        div.txt p:nth-child(3){
+            font-size: 18px;
+        }
+        img{
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="title">
+            <h1><span>01</span> Customized Data Service (CDS, 고객사 맞춤 Data공급)</h1>
+            <h1>맞춤 Data상품 공급</h1>
+            <p>고객사 Needs에 부합하는 최적의 Data 상품을 개발하고, 다양한 전송방식을 통해 고객사에 적시 제공하는 신한카드의 Data 서비스 입니다.</p>
+        </div>
+        <div class="con">
+            <div class="title">
+               <h3>주요영역</h3>
+            </div>
+            <div class="v">
+                <div class="txt">
+                    <p><img src="https://databada.shinhancard.com/assets/icon_custom_01-D_uGWqzi.png" alt=""></p>
+                    <h2>Macro Data</h2>
+                    <p>지역경제, 민간소비, 경제효과, 관광/상권 Data 등</p>
+                </div>
+                <div class="txt">
+                    <p><img src="https://databada.shinhancard.com/assets/icon_custom_02-C3Fg9Baz.png" alt=""></p>
+                    <h2>Consumer Data</h2>
+                    <p>Profile Data, Micro Segments, 고객유입/이탈 등</p>
+                </div>
+                <div class="txt">
+                    <p><img src="https://databada.shinhancard.com/assets/icon_custom_03-CBdTtg5L.png" alt=""></p>
+                    <h2>Merchant & Seller Data</h2>
+                    <p>온/오프라인 사업자 Data</p>
+                </div>
+            </div>
+            <div class="v">
+                <div class="txt">
+                    <p><img src="https://databada.shinhancard.com/assets/icon_custom_05-DIu7oY9U.png" alt=""></p>
+                    <h2>E-Commerce Data</h2>
+                    <p>e커머스 카테고리/브랜드/상품 Data</p>
+                </div>
+                <div class="txt">
+                    <p><img src="https://databada.shinhancard.com/assets/icon_custom_01-D_uGWqzi.png" alt=""></p>
+                    <h2>Market Data</h2>
+                    <p>Market Share, 고객유입/이탈, Brand Performance Data 등</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
