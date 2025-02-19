@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        input{display: none;}
+
+        .main{
+            margin: 0 auto;
+            display: flex;
+            width: 1612px;
+            height: 700px;
+            background: url(./두산로보틱스/0217/sub-bg13.jpg);
+            /* position: relative; */
+        }
+
+        .list01, .list02{
+            width: 220px;
+            height: 60px;
+            background: #000;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+        }
+        /* .list02{
+            position: absolute;
+            left: 50%;
+            top: 0; 
+            width: 220px;
+            height: 60px;
+            background: #000;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+        }*/
+        ul{
+            position: relative;
+            width: 100%;
+            height: 0;
+            list-style: none;
+            transform: scaleY(0);
+            /* display: none; */
+            margin-top: 10px;
+            transition: 0.5s;
+            
+        }
+        ul li{
+            width: 100%;
+            /* height: 0px; 
+            position: absolute;
+            left: 0;
+            top: 50px;*/
+            overflow: hidden;
+            background: #fff;
+            color: #000;
+           
+        }
+        #menu1:checked ~ .main .list01 ul,
+        #menu2:checked ~ .main .list02 ul
+        {
+            transform: scaleY(1);
+            /* display: block; */
+        }
+    </style>
+</head>
+<body>
+    <input type="radio" name="menu" id="menu1">
+    <input type="radio" name="menu" id="menu2">
+
+    <div class="main">
+        <div class="list01">
+            <label for="menu1">제품&솔루션</label>
+            <ul>
+                <li><p>제품&솔루션</p></li>
+                <li><p>교육&서비스</p></li>
+                <li><p>투자정보</p></li>
+                <li><p>회사소개</p></li>
+            </ul>
+        </div>
+        <div class="list02">
+            <label for="menu2">두산 로봇 교육</label>
+            <ul>
+                <li><p>두산 로봇 교육</p></li>
+                <li><p>다운로드 센터</p></li>
+                <li><p>A/S 신청</p></li>
+                <li><p>파트너 서비스</p></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

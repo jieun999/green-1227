@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        section{
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            
+        }
+        section .bg{
+            width: 100%;
+            height: 100%;
+        }
+        section .bg video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.7);
+            /* filter: blur(1px); */
+        }
+        section .con{
+            width: 100%;
+            height: 100%;
+            margin: 0 115px;
+            padding: 0 17px;
+            position: absolute;
+            left: 50px;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: #fff;
+            /* box-sizing: border-box; */
+        }
+        section .con h1{
+            font-size: 45px;
+            line-height: 1.5;
+            letter-spacing: -2px;
+        }
+        section .con p{
+            font-size: 20px;
+            margin-top: 34px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="bg">
+            <video autoplay muted loop>
+                <source src="https://www.jakomosofa.com/_File/popBanner//file_1737348319_0.webm" type="video/webm">
+            </video>
+        </div>
+        <div class="con">
+            <h1>1등 소파만의 독보적 퀄리티<br>
+                소파는 결국, 자코모</h1>
+            <p>We Make Quality JAKOMO.</p>
+        </div>
+    </section>
+</body>
+</html>
