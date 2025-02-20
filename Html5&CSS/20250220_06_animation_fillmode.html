@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+
+        .con{
+            position: relative;
+        }
+        p{
+            position: absolute;
+            left: 50px;
+            top: 100px;
+            animation: rotate 5s linear 0s infinite;
+        }
+        @keyframes rotate{
+            0%{transform: rotate(0deg);}
+            100%{transform: rotate(360deg);}
+        }
+
+        .radio 
+        .radio label{
+            margin-top: 700px;
+            border: 1px solid;
+        }
+        #left:checked ~ p{
+            animation-play-state: running;
+            animation-direction: reverse;
+        }
+        #right:checked ~ p{animation-play-state:running;}
+        #off:checked ~ p{animation-play-state: paused;}
+    </style>
+</head>
+<body>
+    <div class="con">
+        <input type="radio" name="radio" id="left">
+        <input type="radio" name="radio" id="right">
+        <input type="radio" name="radio" id="off">
+
+        <p><img src="./images/propeller.png" alt=""></p>
+
+        <div class="radio">
+            <label for="left">Turn left</label>
+            <label for="right">Turn Right</label>
+            <label for="off">off</label>
+        </div>
+    </div>
+</body>
+</html>
