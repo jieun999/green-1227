@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{margin: 0;padding: 0;}
+
+      .warp{
+        width: 1903px;
+        height: 399px;
+        padding: 24px 0 64px 0;
+        margin: 0 auto;
+        background: #f1f4fb;
+      }
+      .warp ul{
+        width: 1200px;
+        height: 100%;
+        margin: 0 141px auto;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+      }
+      .warp ul li{
+        width: calc((1200px - 60px)/4);
+        height: 357px;
+        padding: 32px;
+        border: 1px solid #ccc;
+        margin-top: 40px;
+        border-radius: 15px;
+        gap: 20px;
+        box-sizing: border-box;
+        background: #fff;
+        margin-top: 40px;
+        transition: 0.5s;
+        position: relative;
+        cursor: pointer;
+      }
+      .warp ul li .con p:nth-of-type(1){
+        width: 120px;
+        height: 120px;
+      }
+
+      .warp ul li:nth-child(1) .con p:nth-of-type(1){
+        background: url(./images/img01.png) no-repeat;
+      }
+      .warp ul li:nth-child(1):hover .con p:nth-of-type(1){
+        background: url(./images/img01_bg.png) no-repeat;
+        animation: ani 3s steps(91) infinite;
+      }
+      .warp ul li:nth-child(2) .con p:nth-of-type(1){
+        background: url(./images/img02.png) no-repeat;
+      }
+      .warp ul li:nth-child(2):hover .con p:nth-of-type(1){
+        background: url(./images/img02_bg.png) no-repeat;
+        animation: ani 3s steps(91) infinite;
+      }
+      .warp ul li:nth-child(3) .con p:nth-of-type(1){
+        background: url(./images/img03.png) no-repeat;
+      }
+      .warp ul li:nth-child(3):hover .con p:nth-of-type(1){
+        background: url(./images/img03_bg.png) no-repeat;
+        animation: ani 3s steps(91) infinite;
+      }
+      .warp ul li:nth-child(4) .con p:nth-of-type(1){
+        background: url(./images/img04.png) no-repeat;
+      }
+      .warp ul li:nth-child(4):hover .con p:nth-of-type(1){
+        background: url(./images/img04_bg.png) no-repeat;
+        animation: ani 3s steps(91) infinite;
+      }
+
+    .warp ul li:hover{
+      margin-top: 0px;
+      box-shadow: 0 40px 20px 0px rgba(177, 174, 199, 0.3);
+    }
+    @keyframes ani{
+        0%{background-position: 0 0;}
+        100%{background-position: -10920px 0;}
+    }
+    .warp ul li .con{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .warp ul li .con h1{
+      width: 100%;
+      flex-direction: column;
+      font-size: 24px;
+    }
+    .warp ul li .con h1 span{
+      font-weight: normal;
+      font-size: 20px;
+    }
+    .warp ul li .con p:nth-of-type(2){
+      padding: 5px 10px;
+      text-align: center;
+      font-size: 18px;
+      border-radius: 20px;
+      background: #f1f4fb;
+      font-weight:700;
+      box-sizing: border-box;
+    }
+    .arrow{
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      transform: rotate(-90deg);
+    }
+    .arrow img{
+      width: 24px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="warp">
+      <ul>
+        <li>
+          <p class="arrow">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD8SURBVHgB7dZNDoIwFATghy40ygKNGo7DUbyJeAOPpDfwGCyIbvBnhx0iLgzGtrwujPMlTRoCLzPpgooQERERERFZSJbpGksCCTofg2fLtMaar9KNKEvMzHa+S4mBeKhryTVLIHxkZoqHoe2L92t1HE/iKIokez7KJnEst0t1kB7ew5v99lwWO9vvrQuAKbHXLNEV/lQWucsMpwKgVUIjPDgXgL4ltMKDVwHwLaEZHrwLgGsJ7fDQqwDYlggRHnoXgG8lQoUHlQLwqcRoGmehwjfzRFmySHNTovMvrR0e1E6g1XESjRDhg8JJvC5/Zi+/KPT1m4iIiIiI/tsDSnenBaZDEmYAAAAASUVORK5CYII=" alt="">
+          </p>
+          <div class="con">
+            <h1><span>다양한</span><br></gr>Data서비스</h1>
+            <p></p>
+            <p>Data One-Stop Service</p>
+          </div>
+        </li>
+        <li>
+          <p class="arrow">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD8SURBVHgB7dZNDoIwFATghy40ygKNGo7DUbyJeAOPpDfwGCyIbvBnhx0iLgzGtrwujPMlTRoCLzPpgooQERERERFZSJbpGksCCTofg2fLtMaar9KNKEvMzHa+S4mBeKhryTVLIHxkZoqHoe2L92t1HE/iKIokez7KJnEst0t1kB7ew5v99lwWO9vvrQuAKbHXLNEV/lQWucsMpwKgVUIjPDgXgL4ltMKDVwHwLaEZHrwLgGsJ7fDQqwDYlggRHnoXgG8lQoUHlQLwqcRoGmehwjfzRFmySHNTovMvrR0e1E6g1XESjRDhg8JJvC5/Zi+/KPT1m4iIiIiI/tsDSnenBaZDEmYAAAAASUVORK5CYII=" alt="">
+          </p>
+          <div class="con">
+            <h1><span>혁신적인</span><br></gr>솔루션서비스</h1>
+            <p></p>
+            <p>상권분석, 시장모니터링</p>
+          </div>
+        </li>
+        <li>
+          <p class="arrow">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD8SURBVHgB7dZNDoIwFATghy40ygKNGo7DUbyJeAOPpDfwGCyIbvBnhx0iLgzGtrwujPMlTRoCLzPpgooQERERERFZSJbpGksCCTofg2fLtMaar9KNKEvMzHa+S4mBeKhryTVLIHxkZoqHoe2L92t1HE/iKIokez7KJnEst0t1kB7ew5v99lwWO9vvrQuAKbHXLNEV/lQWucsMpwKgVUIjPDgXgL4ltMKDVwHwLaEZHrwLgGsJ7fDQqwDYlggRHnoXgG8lQoUHlQLwqcRoGmehwjfzRFmySHNTovMvrR0e1E6g1XESjRDhg8JJvC5/Zi+/KPT1m4iIiIiI/tsDSnenBaZDEmYAAAAASUVORK5CYII=" alt="">
+          </p>
+          <div class="con">
+            <h1><span>스마트한</span><br></gr>광고서비스</h1>
+            <p></p>
+            <p>최적의 고객 타겟팅</p>
+          </div>
+        </li>
+        <li>
+          <p class="arrow">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD8SURBVHgB7dZNDoIwFATghy40ygKNGo7DUbyJeAOPpDfwGCyIbvBnhx0iLgzGtrwujPMlTRoCLzPpgooQERERERFZSJbpGksCCTofg2fLtMaar9KNKEvMzHa+S4mBeKhryTVLIHxkZoqHoe2L92t1HE/iKIokez7KJnEst0t1kB7ew5v99lwWO9vvrQuAKbHXLNEV/lQWucsMpwKgVUIjPDgXgL4ltMKDVwHwLaEZHrwLgGsJ7fDQqwDYlggRHnoXgG8lQoUHlQLwqcRoGmehwjfzRFmySHNTovMvrR0e1E6g1XESjRDhg8JJvC5/Zi+/KPT1m4iIiIiI/tsDSnenBaZDEmYAAAAASUVORK5CYII=" alt="">
+          </p>
+          <div class="con">
+            <h1><span>탁월한</span><br></gr>API서비스</h1>
+            <p></p>
+            <p>Data 실시간 활용</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
