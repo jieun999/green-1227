@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        div.con{
+            width: 1920px;
+            height: 1200px;
+            background: #FFD678;
+            position: relative;
+        }
+        .con p{
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            margin: 50px;
+        }
+        .con p:nth-child(1){
+            width: 700px; height: 700px; border-radius: 50%;
+            background: #fff;   
+        }
+        .con p:nth-child(2){
+            top: 43%;
+            animation: move 2s infinite cubic-bezier(0.1, 0.1, 0.1, 1);
+        }
+        .con p:nth-child(3){
+            animation: rotate 20s infinite linear;
+        }
+        .con p:nth-child(4){
+            width: 272px;
+            height: 78px;
+            top: 67%;
+            display: flex;
+            justify-content: center;
+            font-size: 26px;
+            font-weight: 500;
+            border: 1px solid;
+            padding: 5px 15px;
+            border-radius: 100px;
+            cursor: pointer;
+        }
+        .con p:nth-child(4):hover{
+            background: #000;
+            color: #fff;
+        }
+        @keyframes rotate{
+            0%{transform: translate(-50%, -50%) rotate(0deg);}
+            100%{transform: translate(-50%, -50%) rotate(360deg);}
+        }
+        @keyframes move{
+            0%{top: 43%;}
+            50%{top: 40%;}
+            100%{top: 43%}
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <p></p>
+        <p><img src="https://solvek.co.kr/css/img/y-bg.png" alt=""></p>
+        <p><img src="https://solvek.co.kr/css/img/c-txt-box.png" alt=""></p>
+        <p>JOIN US!</p>
+    </div>
+</body>
+</html>
