@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        div>div{width: 500px;height: 500px;border: 1px solid;margin: 20px;}
+        p{
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+            text-align: center;
+        }
+        .con1{
+            position: relative;
+        }
+        .con1 p, .con1 p span{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .con2, .con2 p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .con3, .con3 p{
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            /* align-items: center; */
+        }
+        .con4{
+            display: grid;
+            justify-items: center;
+        }
+
+        /* align-items: center, align-content: center의 차이 
+        align-items는 수직축의 라인을 기준으로 아이템들이 정렬이 되고,
+        align-content는 수직축의 라인을 기준으로 (두 줄 이상 일 때만) 라인 자체가 정렬이 된다.
+        예시 이미지 및 출처: https://letsgojieun.tistory.com/49
+        */
+
+        article{
+            display: grid;
+            /* justify-content: center; */
+            justify-items: center;
+        }
+        article a{
+            display: block;
+            border: 1px solid;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div>
+        <div class="con1"><p>position<br>123</p></div>
+        <div class="con2"><p>flex</p></div>
+        <div class="con3"><p>grid</p></div>
+    </div> -->
+    <div>
+        <div class="con1"><p><span>position<br>123</span></p></div>
+        <div class="con2"><p>flex<br>123</span></p></div>
+        <div class="con3"><p>grid<br>154645623</span></p></div>
+        <section class="con4"><a href="#">grid<br>154sad645asd623</span></p></section>
+        <article>
+            <a href="#">123456789</a>
+            <a href="#">123489</a>
+            <a href="#">1289</a>
+            <a href="#">123456456789</a>
+        </article>
+    </div>
+</body>
+</html>
