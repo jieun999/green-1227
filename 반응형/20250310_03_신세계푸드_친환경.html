@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+
+        .food .intention{
+            width: 100%;
+            max-width: 940px;
+            margin: 0 auto;
+        }
+
+        .food .intention h1{
+            text-align: center;
+            padding: 0 0 45px;
+            font-size: 25px;
+        }
+        .food .intention p{
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .food .intention p img{
+            width: 100%;
+        }
+
+        .food .practice{
+            width: 100%;
+            max-width: 940px;
+            margin: 0 auto;
+        }
+        .food .practice h1{
+            text-align: center;
+            padding: 0 0 45px;
+            font-size: 25px;
+            margin-top: 50px;
+        }
+        .food .practice ul{
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            width: 100%;
+            margin: 0 auto;
+            gap: 40px;
+        }
+        .food .practice ul li{
+            flex: 1 0 40%;
+        }
+        .food .practice ul li img{
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        .food .practice ul li p{
+            border-left: 3px solid #ccc;
+            font-size: 20px;
+            color: #444;
+            font-weight: bold;
+            padding-left: 20px;
+            word-break: keep-all;
+        }
+        .food .practice ul li p span{
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1px;
+        }
+        .food .practice ul li p a{
+            /* display: block;
+            width: 30%;
+            margin-top: 20px;
+            font-size: 14px;
+            background: #aaa;
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 15px 5px 10px;
+            white-space: nowrap; */
+            display: block;
+            width: 125px;
+            margin-top: 20px;
+            font-size: 14px;
+            background: #aaa;
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 15px 5px 10px;
+            white-space: nowrap;
+        }
+
+
+
+        @media screen and (max-width: 960px) {
+            .food .intention h1,.food .practice h1{
+            text-align: center;
+            padding: 0 0 20px;
+            font-size: 16px;
+        }
+        .food .intention p img{
+            width: 70%;
+            border: 1px #ccc;
+        }
+        .food .practice ul li p{
+            border-left: 3px solid #ccc;
+            font-size: 14px;
+            color: #444;
+            padding-left: 20px;
+            word-break: keep-all;
+        }
+        .food .practice ul li p span br{display: none;}
+        }
+
+        @media screen and (max-width: 640px) {
+            .food .practice ul{
+            display: block;
+        }
+        .food .practice ul li{
+            margin-top:20px;
+            margin-bottom: 40px;
+        }
+        .food .practice ul li p{
+            line-height: 30px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="food">
+        <div class="intention">
+            <h1>친환경경영 의사결정 조직</h1>
+            <p><img src="https://www.shinsegaefood.com/images/background/bg_evf_graph.png" alt=""></p>
+        </div>
+
+        <div class="practice">
+            <h1>친환경 활동 실천</h1>
+            <ul>
+                <li>
+                    <img src="https://www.shinsegaefood.com/images/background/bg_evf_img_01.png" alt="">
+                    <p>
+                        음성공장 태양열발전<br>
+                        <span>
+                            음성공장 상부 유휴부지를 활용하여 신재생에너지를 생산하여<br>
+                            가스(LNG)를 대체하여 사용하고 있습니다.
+                        </span>
+                        <a href="#">태양열에너지 사용현황</a>
+                    </p>
+                    <!-- <p><a href="#">태양열에너지 사용현황</a></p> -->
+                </li>
+                <li>
+                    <img src="https://www.shinsegaefood.com/images/background/bg_evf_img_02.png" alt="">
+                    <p>
+                        친환경패키징 확대<br>
+                        <span>
+                            식품제조 시 사용되는 용기를 탄소중립형 포장재,<br>
+                            대체 플라스틱 적용을 확대하고 있습니다.
+                        </span>
+                    </p>
+                </li>
+                <li>
+                    <img src="https://www.shinsegaefood.com/images/background/bg_evf_img_03.png" alt="">
+                    <p>
+                        대안육제품 개발<br>
+                        <span>
+                            제품 제조 시 원료육 대신 식물성 원료를 사용하여 가축사육 시<br>
+                            발생되는 메탄가스 및 물과 사료의 사용량을 줄여 지속가능한<br>
+                            지구환경에 이바지 하고자 합니다.
+                        </span>
+                    </p>
+                </li>
+                <li>
+                    <img src="https://www.shinsegaefood.com/images/background/bg_evf_img_05.png" alt="">
+                    <p>
+                        (협력회사)친환경 경영 독려<br>
+                        <span>
+                            2021년부터 (물류 등)협력회사 입찰평가 시 ESG경영 우수 실천<br>
+                            협력사 대상 가점 부여를 통해 ESG 영향력 전파에 앞장서고 있습니다.
+                        </span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
