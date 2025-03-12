@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* :root{font-size: 10px;} */
+        html{font-size: 10px;}
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #333;}
+
+        .promise{
+            width: 100%;
+            max-width: 1400px;
+            padding: 0 20px;
+            margin: 100px auto;
+            font-family: Pretendard, sans-serif;
+        }
+        .promise .headtitle{
+            width: 50%;
+        }
+        .promise .headtitle h1{
+            font-weight: 700;
+            color: #1e2123;
+            font-size: 4.5rem;
+            line-height: 1.2;
+        }
+        .promise .headtitle p{
+            font-size: 1.8rem;
+            line-height: 1.5;
+            color: #666;
+            margin-top: 1.5rem;
+        }
+        .promise ul{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10%;
+            margin-top: -12rem;
+        }
+        .promise ul li.left{
+            width: 45%;
+            max-width: 480px;
+        }
+        .promise ul li.right{
+            width: 45%;
+        }
+        .promise ul li .con{
+            width: 100%;
+        }
+        .promise ul li img{width: 100%;}
+        .promise ul li .txt h1{
+            margin-top: 3rem;
+            font-size: 3.0rem;
+            font-weight: 700;
+            color: #000;
+            line-height: 1.2;
+        }
+        .promise ul li .txt p{
+            margin-top: 1rem;
+            font-size: 1.8rem;
+            line-height: 1.5;
+            color: #666;
+        }
+        .promise ul li .txt a{
+            font-size: 1.5rem;
+            color: #000;
+            line-height: 2;
+            position: relative;
+            display: inline-block;
+            padding: 0 3px;
+            margin-top: 2.5rem;
+            position: relative;
+            padding: 0 5px;
+            z-index: 1;
+            transition: 0.5s;
+        }
+        .promise ul li .txt a::after{
+            content: "";
+            width: 100%;
+            height: 0.3rem;
+            background: #000;
+            position: absolute;
+            bottom: -0.5rem;
+            left:0;
+            z-index: -1;
+            transition: 0.5s;
+        }
+        .promise ul li .txt a:hover:after{height: calc(100% + 0.5rem);}
+        .promise ul li .txt a:hover{color: #fff;}
+        .promise ul li.right > .con:nth-child(2){margin-top: 10rem;}
+
+        @media screen and (max-width: 1339px){
+            .promise{box-sizing: border-box;}
+        }
+        @media screen and (max-width: 1280px){
+            .promise .headtitle h1{font-size: 4.3rem;}
+            .promise ul {margin-top: -8rem;}
+        }
+        @media screen and (max-width: 1080px){
+            html{font-size: 9px;}
+        }
+        @media screen and (max-width: 960px){
+            .promise .headtitle{width: 100%;}
+            .promise ul {margin-top: 3rem;}
+        }
+        @media screen and (max-width: 560px){
+            .promise ul{
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .promise ul li.left .con > div:first-child{
+                padding-bottom: 65%;
+                height: 0;
+                overflow: hidden;
+                position: relative;
+            }
+            .promise ul li.left .con > div:first-child img{
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .promise ul li.left{
+                width: 100%;
+                max-width: 480px;
+            }
+            .promise ul li.right{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="promise">
+        <div class="headtitle">
+            <h1>우리의 약속</h1>
+            <p>
+                급격한 대내외 변화에 대응하기 위해 비전과 목표, 체계 등을 수립하고,<br>
+                지속적인 개선활동을 수행하여 ESG 경영 실천에 대한 의지를 표명하고자 합니다.
+            </p>
+        </div>
+        <ul>
+            <li class="left">
+                <div class="con">
+                    <div><img src="https://www.samsungshi.com/ESG/Kor/images/main/promise_e.jpg" alt=""></div>
+                    <div class="txt">
+                        <h1>환경</h1>
+                        <p>사업 전반에 있어서 환경을 먼저 생각하고, 기후변화 대응에 앞장서겠습니다.</p>
+                        <a href="#">자세히 보기</a>
+                </div>
+            </li>
+            <li class="right">
+                <div class="con">
+                    <p><img src="https://www.samsungshi.com/ESG/Kor/images/main/promise_s.jpg" alt=""></p>
+                    <div class="txt">
+                        <h1>사회적 책임</h1>
+                        <p>이해관계자의 가치를 존중하고, 사회적 책임을 다하겠습니다.</p>
+                        <p><a href="#">자세히 보기</a></p>
+                    </div>
+                </div>
+                <div class="con">
+                    <p><img src="https://www.samsungshi.com/ESG/Kor/images/main/promise_g.jpg" alt=""></p>
+                    <div class="txt">
+                        <h1>거버넌스</h1>
+                        <p>투명하고 건전한 거버넌스를 확립하여 깨끗한 문화를 정착시키겠습니다.</p>
+                        <p><a href="#">자세히 보기</a></p>
+                    </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
