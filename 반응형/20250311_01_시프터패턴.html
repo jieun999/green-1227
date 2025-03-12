@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+
+        #wrap{
+            width: 100%;
+            max-width: 1200px;
+            height: 100vh;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        section#box_a{
+            width: 20%;
+            height: 100%;
+            background: #aaa;
+        }
+        section#box_b{
+            width: 80%;
+            height: 100%;
+        }
+        section#box_b div:first-child{
+            width: 100%;
+            height: 50%;
+            background: #bbb;
+        }
+        section#box_b div:last-child{
+            width: 100%;
+            height: 50%;
+            background: #ccc;
+        }
+
+        @media screen and (max-width: 1024px) {
+            section#box_a{
+                width: 100%;
+                height: 30%;
+            }
+            section#box_b{
+                width: 100%;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            section#box_a{
+                height: 20%;
+            }
+            section#box_b div:first-child, section#box_b div:last-child{
+                height: 100%;
+            }
+            /* (2) div가 어차피 두개기 때문에 css에서는 div를 한번에 지정할 수 있지만,
+            반응형을 만들 때는 위에서 준 서식을 그대로 써야하기 때문에
+            div:first-child, div:last-child라고 똑같이 가져와 사용한다.*/
+        }
+        /* 반응형을 만들 때, 위에서 준 서식을 아래서식이 그대로 가져가기 때문에 크기가 줄어들 때(혹은 커질 때) 달라지는 값만 넣으면 된다.
+        또한, 서식의 이름을 그대로 사용해야한다. 위의 예시를 들면(2)*/
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <section id="box_a"></section>
+        <section id="box_b">
+        <div></div>
+        <div></div>
+        </section>
+    </div>
+</body>
+</html>

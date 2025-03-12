@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+
+        div#box_a{
+            height: 367px;
+        }
+        div#box_a h1{
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 50px;
+        }
+        div#box_a .list_man{
+            width: 80%;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        div#box_a .list_man li{
+            width: 30%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 auto;
+            border-bottom: 3px solid #000;
+            padding: 30px 0;
+            box-sizing: border-box;
+            align-items: center;
+            word-break: keep-all;
+        }
+        div#box_a .list_man:last-child li{
+            border-bottom: 0;
+        }
+
+        div#box_a .list_man li p:first-child{
+            font-size: 22px;
+        }
+        div#box_a .list_man li p:last-child{
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 1024px) {
+            div#box_a .list_man{width: 95%;}
+            #box_a .list_man li{width: 23%;}
+
+            div#box_a .list_man li p:first-child{
+            font-size: 17px;
+        }
+        div#box_a .list_man li p:last-child{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        }
+        @media screen and (max-width: 765px) {
+            div#box_a{
+            display: flex;
+            flex-direction: column;
+        }
+        div#box_a .list_man:last-child li{border-bottom: 3px solid #000;}
+            #box_a .list_man{width: 25%;}
+            #box_a .list_man li{width: 50%;}
+        }
+    </style>
+</head>
+<body>
+    <div id="box_a">
+        <h1>삼성중공업 주식회사</h1>
+        <ul class="list_man 01">
+            <li>
+                <p>대표이사</p>
+                <p>최성안</p>
+            </li>
+            <li>
+                <p>창립일</p>
+                <p>1974년 8월 5일</p>
+            </li>
+            <li>
+                <p>종업원수</p>
+                <p>8,801억원</p>
+            </li>
+        </ul>
+        <ul class="list_man 02">
+            <li>
+                <p>자본금</p>
+                <p>8,801억원</p>
+            </li>
+            <li>
+                <p>매출액</p>
+                <p>79,072억원</p>
+            </li>
+            <li>
+                <p>총자산</p>
+                <p>158,920억원</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
