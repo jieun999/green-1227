@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+
+        .wrap{
+            width: 100%;
+            max-width: 1800px;
+            /* height: 824px; */
+            margin: 0 auto;
+        }
+        .wrap .program{
+            /* width: 100%; */
+            height: 100%;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "program01 program02 program03" "program04 program05 program06";
+            gap: 24px;
+        }
+        .wrap .program li{
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 102%;
+    /* filter: brightness(0.7); */
+    transition: 0.5s;
+    position: relative;
+}
+.wrap .program li:not(:nth-child(1), :nth-child(5))::after{
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 1;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+.wrap .program li:not(:nth-child(1), :nth-child(5)):hover{
+    /* filter: brightness(1); */
+    background-size: 110%;
+    cursor: pointer;
+}
+.wrap .program li:hover::after{
+    opacity: 0;
+}
+.wrap .program li a{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    z-index: 2;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+}
+.wrap .program li a svg{
+    margin-left: 5px;
+    vertical-align:0;
+}
+.wrap .program li:nth-child(1){grid-area: program01;}
+.wrap .program li:nth-child(1) h1{
+    font-size: 64px;
+    color: #222;
+}
+.wrap .program li:nth-child(1) .txt p{
+    margin-top: 20px;
+    font-size: 20px;
+    color: #5d5d5d;
+}
+.wrap .program li:nth-child(2){
+    grid-area: program02;
+    background-image: url(https://gggs.kaist.ac.kr/html/images/main/sec03_tab01.png);
+}
+.wrap .program li:nth-child(3){
+    grid-area: program03;
+    background-image: url(https://gggs.kaist.ac.kr/html/images/main/sec03_tab02.png);
+}
+.wrap .program li:nth-child(4){
+    grid-area: program04;
+    background-image: url(https://gggs.kaist.ac.kr/html/images/main/sec03_tab03.png);
+}
+.wrap .program li:nth-child(5){
+    grid-area: program05;
+    background-image: url(https://gggs.kaist.ac.kr/html/images/main/sec03_thumb.png);
+}
+.wrap .program li:nth-child(6){
+    grid-area: program06;
+    background-image: url(https://gggs.kaist.ac.kr/html/images/main/sec03_tab04.png);
+}
+       
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="program">
+            <li>
+                <div class="txt">
+                    <h1>PROGRAM</h1>
+                    <p>
+                        <strong>KAIST GGGS</strong>에서는 녹색성장과 지속가능성 문제해결을 위해<br>
+                        탄소중립기후기술 및 정책·금융에 대한 통섭적인 이해를 갖춘<br>
+                        국가 핵심인재를 양성합니다.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <a href="#">박사과정 <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#fff"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg></a>
+            </li>
+            <li>
+                <a href="#">군학 프로그램 <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#fff"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg></a>
+            </li>
+            <li>
+                <a href="#">석사과정 <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#fff"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg></a>
+            </li>
+            <li>
+                <p></p>
+            </li>
+            <li>
+                <a href="#">외국인 전형 <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#fff"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg></a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

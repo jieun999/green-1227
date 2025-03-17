@@ -101,15 +101,17 @@
             width: 100%;
             background-repeat: no-repeat;
             background-position: center;
-            background-size: 110%;
+            background-size: 100%;
             position: relative;
+            transition: 0.5s;
         }
         .spc ul.brand li:nth-child(1){
             grid-area: brand01;
-            background-image: url(https://www.spc.co.kr/img/front/main/eat.webp);
+            background: url(https://www.spc.co.kr/img/front/main/eat.webp) no-repeat center/cover;
         }
         .spc ul.brand li:nth-child(2){
             grid-area: brand02;
+            position: relative;
         }
         .spc ul.brand li:nth-child(3){
             grid-area: brand03;
@@ -123,6 +125,16 @@
             grid-area: brand05;
             background-image: url(https://www.spc.co.kr/files/brand/2024/06/b59cd9b1-6acb-4deb-8d6a-7999988968bb.jpg);
         }
+        .spc ul.brand li:nth-child(3):hover,.spc ul.brand li:nth-child(4):hover,.spc ul.brand li:nth-child(5):hover
+        {background-size: 110%;}
+
+        .spc ul.brand li:nth-child(2) > .txt {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        /* .spc ul.brand li:nth-child(2) > .txt h1{font-size: 4.8rem;}
+        .spc ul.brand li:nth-child(2) > .txt p{font-size: 2rem;} */
 
         .spc ul.brand li .txt{
             font-size: 14rem;
@@ -202,7 +214,7 @@
                 </div>
             </li>
             <li>
-                <div>
+                <div class="txt">
                     <h1>brand</h1>
                     <p>SPC그룹의 다양한 브랜드를 만나보세요.</p>
                     <p>< 01/06 ></p>

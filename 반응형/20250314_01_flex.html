@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+
+        .wrap{
+             width: 95%;
+             max-width: 1280px;
+             margin: 0 auto;
+            /* padding: 0 50px;
+            box-sizing: border-box; */
+        }
+        .con{
+            height: 500px;
+            display: flex;
+            background: #ccc;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            align-content: center;
+            /* align-content: center는 요소를 가운데로 보내는 수식인데,
+            행이 하나면 어차피 중심으로 맞춰져있기 때문에 2행 이상이 아닌 이상 의미가 없다. */
+            gap: 20px 40px;
+        }
+        .con > div{
+            width: 30%;
+            flex: 1 0 30%;
+            /* width를 지정해 크기값을 제한해도 기본 크기(최소크기)를 지정하지 않았기 때문에
+              width를가 먹히지 않는다. 그러나 flex-wrap: wrap을 적용하면 width이 먹힌다.*/
+              background: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="con">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </div>
+    </div>
+</body>
+</html>
