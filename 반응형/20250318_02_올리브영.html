@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #222;}
+        body{font-family: Pretendard;}
+
+        .cj{
+            width: 100%;
+            max-width: 1420px;
+            margin: 50px auto;
+            /* background: #ccc; */
+        }
+        .cj > ul{
+            width: 100%;
+            display: flex;
+            gap: 60px;
+            justify-content: space-around;
+        }
+        .cj > ul .left{
+            height: 100%;
+            position: sticky;
+            top: 100px;
+        }
+        .cj > ul .left ul li div.txt {
+            margin-top: 50px;
+        }
+        .cj > ul .left ul li div.txt a{
+            display: block;
+            padding: 8px 0;
+            text-decoration: none;
+            color: #222;
+        }
+        .cj > ul .left ul li > div h1{
+            font-size: 54px;
+        }
+        .cj > ul .right{
+            width: 50%;
+        }
+        .cj > ul .right ul li{
+            display: flex;
+            gap: 50px;
+            margin-top: 40px;
+        }
+        .cj > ul .right ul li .title span{
+            display: none;
+        }
+        .cj > ul .right ul li .con .txt{
+            margin-top: 45px;
+            
+        }
+        .cj > ul .right ul li .con .txt p{
+            margin-top: 35px;
+            margin-bottom: 40px;
+            line-height: 1.5;
+            font-size: 18px;
+            color: #565e65;
+        }
+        .cj > ul .right ul li .con .txt a{
+            border-bottom: 2px solid;
+            font-weight: bold;
+        }
+        .cj > ul .right ul li .con .txt br.mo{
+            display: none;
+        }
+        .cj > ul .right ul li img{
+            width: 100%;
+            height: 100%;
+        }
+
+        @media screen and (max-width: 1170px) {
+        .cj > ul{
+            flex-direction: column;
+        }
+        .cj > ul .left{
+            position:relative;
+        }
+        .cj > ul .left ul li div.txt {
+            display: none;
+        }
+        .cj > ul .left ul li > div h1{
+            font-size: 26px;
+            margin-bottom: 100px;
+        }
+        .cj > ul .right{
+            width: 100%;
+        }
+        .cj > ul .right ul li{
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        .cj > ul .right ul li .title {color: #82dc28;}
+        .cj > ul .right ul li .title span{
+            display: inline;
+            color: #222;
+        }
+        .cj > ul .right ul li{
+            margin-top: 50px;
+        }
+        .cj > ul .right ul li .con p:first-child{
+            margin: 0px 20px;
+        }
+        .cj > ul .right ul li .con .txt{
+            margin-top: 30px;
+        }
+        .cj > ul .right ul li .con .txt h1{
+            font-size: 18px;
+        }
+        .cj > ul .right ul li .con .txt p{
+            margin-top: 35px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            font-size: 13px;
+            color: #565e65;
+        }
+        .cj > ul .right ul li .con .txt a{
+            font-size: 13px;
+            border-bottom: 2px solid;
+            font-weight: bold;
+        }
+        .cj > ul .right ul li .con .txt br.mo{
+            display: inline;
+        }
+        .cj > ul .right ul li img{
+            width: 100%;
+            height: 100%;
+        }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="cj">
+        <ul>
+            <li class="left">
+                <ul>
+                    <li>
+                        <div>
+                            <h1>OLIVE YOUNG<br>
+                                Platforms</h1>
+                            <div class="txt">
+                                <a href="#">올리브영 매장</a>
+                                <a href="#">올리브영 Online(국내)</a>
+                                <a href="#">올리브영 글로벌</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="right">
+                <ul>
+                    <li>
+                        <div class="title">01 <span>올리브영 매장 (국내)</span></div>
+                        <div class="con">
+                            <p><img src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform1-cf428ca64855adc4a1062251b83cf683.jpg" alt=""></p>
+                            <div class="txt">
+                                <h1>고객과 가장 가까운 곳에서<br>
+                                    건강한 아름다움을 제안합니다.
+                                </h1>
+                                <p>
+                                    우리는 1,370여개의 매장을 기반으로 고객에게 <br class="mo">
+                                    뷰티&헬스 상품을 큐레이션합니다.<br class="pc">
+                                    또한 체험형 콘텐츠와 커머스의 연계를 통해 <br class="mo">
+                                    파트너사들에게 <br class="pc">
+                                    매력적인 브랜딩, 마케팅 채널로 <br class="mo">
+                                    진화하고 있습니다.
+                                </p>
+                                <a href="#">올리브영 매장이 보고싶다면?</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">02 <span>올리브영 Online (국내)</span></div>
+                        <div class="con">
+                            <p><img src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform2-777eecd5b0d28e7c17848bfe3dffe645.jpg" alt=""></p>
+                            <div class="txt">
+                                <h1>고객이 건강한 아름다움을 찾아가는<br>
+                                    온라인 PLAYGROUND를 제공합니다.
+                                </h1>
+                                <p>
+                                    우리는 차별화된 온라인 콘텐츠와 AI기술 기반<br class="mo">
+                                    상품 추천을 통해 월 이용자 수 532만명,<br class="pc">
+                                    멤버십 회원 수 1,560만명 이상의 뷰티&헬스 커뮤니티를 <br class="mo">
+                                    구현했습니다.<br class="pc">
+                                    또한 업계 최초 당일 배송 서비스인 오늘드림을 <br class="mo">
+                                    실행하여 고객경험을 혁신했습니다.
+                                </p>
+                                <a href="#">올리브영 매장이 보고싶다면?</a>
+                        </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">03 <span>올리브영 글로벌</span></div>
+                        <div class="con">
+                            <p><img src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform3-c78371c66bba75b227096ecd0f128e12.jpg" alt=""></p>
+                            <div class="txt">
+                                <h1>전세계에 한국의<br>
+                                    뷰티&헬스를 알립니다.
+                                </h1>
+                                <p>
+                                    우리는 한국의 뷰티&헬스 브랜드들이 세계로 뻗어<br class="mo">
+                                    나가는 교두보 역할을 수행합니다.<br class="pc">
+                                    2019년 런칭한 글로벌몰과 연간 약 500만명 이상이<br class="mo">
+                                    외국인 고객이 방문하는 국내 글로벌 특화매장은 <br class="pc">
+                                    파트너사와 함께 글로벌 시장에서 동반 성장을<br class="mo">
+                                    할 수 있는 핵심 원동력입니다.
+                                </p>
+                                <a href="#">올리브영의 글로벌 플랫폼을 보고싶다면?</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+  </body>
+</html>

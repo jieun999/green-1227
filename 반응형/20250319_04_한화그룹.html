@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		ul{list-style: none;}
+
+        .value{
+            width: 100%;
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+        .value .inner ul{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+        }
+        .value .inner ul li{
+            width: 100%;
+            border: 1px solid #ccc;
+            padding: 30px 25px;
+            border-radius: 15px;
+            justify-content: space-between;
+            box-sizing: border-box;
+            position: relative;
+            cursor: pointer;
+        }
+        /* .value .inner ul li::after{
+            content: url(../Html5&CSS/images/arrow_forward_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg);
+            position: absolute;
+            top: 50%;
+            right: 7.5%;
+            transform: translate(-50%, -50%);
+            display: flex;
+        } */
+        .value .inner ul li::before{
+            content:url(../Html5&CSS/images/arrow_forward_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg);
+            width: 35px;
+            height: 35px;
+            right: 5%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid #ccc;
+            position: absolute;
+            border-radius: 100%;
+            transition: 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .value .inner ul li:hover:before{
+            border: 1px solid orange;
+            background: orange;
+        }
+        /* .value .inner ul li:hover::after{
+            filter: invert(100%) ;
+        } */
+        .value .inner ul li p{
+            width: 100%;
+            object-fit: cover;
+        }
+        .value .inner ul li p img{
+            width: 80%;
+            border-radius: 15px;
+        }
+	</style>
+</head>
+<body>
+	<div class="value">
+        <div class="inner">
+            <ul>
+                <li>
+                    <p><img src="https://www.hanwha.com/upload/company/20240422/1713775631479.jpg" alt=""></p>
+                </li>
+                <li>
+                    <p><img src="https://www.hanwha.com/upload/company/20240423/1713869856042.jpg" alt=""></p>
+                </li>
+                <li>
+                    <p><img src="https://www.hanwha.com/upload/company/20240423/1713874192354.jpg" alt=""></p>
+                </li>
+                <li>
+                    <p><img src="https://www.hanwha.com/upload/company/20240423/1713874567467.jpg" alt=""></p>
+                </li>
+                <li>
+                    <p><img src="https://www.hanwha.com/upload/company/20240423/1713874779700.jpg" alt=""></p>
+                </li>
+                <li>
+                    <p><img src="https://www.hanwha.com/upload/company/20240423/1713874951317.jpg" alt=""></p>
+                </li>
+                <li>
+                    <p><img src="https://www.hanwha.com/upload/company/20240423/1713871679059.jpg" alt=""></p>
+                </li>
+                <li>
+                    <p><img src="https://www.hanwha.com/upload/company/20240423/1713875088485.jpg" alt=""></p>
+                </li>
+                <li>
+                    <p><img src="https://www.hanwha.com/upload/company/20240423/1713875259067.jpg" alt=""></p>
+                </li>
+                <li>
+                    <p><img src="https://www.hanwha.com/upload/company/20240423/1713875384846.jpg" alt=""></p>
+                </li>
+                <li>
+                    <p><img src="https://www.hanwha.com/upload/company/20240521/1716268151833.jpg" alt=""></p>
+                </li>
+                <li>
+                    <p><img src="https://www.hanwha.com/upload/company/20240423/1713875509763.jpg" alt=""></p>
+                </li>
+                <li>
+                    <p><img src="https://www.hanwha.com/upload/company/20240423/1713875629246.jpg" alt=""></p>
+                </li>
+            </ul>
+        </div>
+	</div>
+</body>
+</html>
