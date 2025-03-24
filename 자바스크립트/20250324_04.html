@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <p class="demo">demo1</p>
+    <p class="demo">demo2</p>
+    <div class="con">컨텐츠 영역</div>
+
+    <button onclick="my1()">demo1</button>
+    <button onclick="my2()">demo2</button>
+
+    <p>First Name: <input name="fname" type="text" value="Michael"></p>
+    <p>First Name: <input name="fname" type="text" value="Doug"></p>
+
+
+    <script>
+        document.getElementsByClassName("con")[0].style.display="none";
+        // document.getElementsByClassName("demo")[1].style.display="none";
+        // 클래스의 경우, 네임이 하나밖에 없어도 demo와 같이 몇 번째 서식인지 지정해줘야한다.
+
+        document.getElementsByName("fname")[0].value="미첼";
+        document.getElementsByTagName("p")[3].innerText="변경";
+    </script>
+</body>
+</html>

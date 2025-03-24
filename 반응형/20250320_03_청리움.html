@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{display: none;}
+        ul{list-style: none;}
+        
+        .wrap{
+            width: 100%;
+            padding: 48px 96px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        .wrap .top {}
+
+        .con ul li{
+            width: 90%;
+            height: 461px;
+            border-radius: 15px;
+            position: relative;
+        }
+        .con ul li img{
+            width: 100%;
+            height: 100%;
+        }
+        .con ul li .txt{
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
+            color: #fff;
+        }
+        .con ul li .txt p:first-child{
+            font-size: 40px;
+        }
+        .con ul li {display: none;}
+        .con ul li:nth-child(1){background: url(https://www.cheongrium.com/static/images/spaceinfo/main_space_1.jpg) no-repeat center/cover; }
+        .con ul li:nth-child(2){background: url(https://www.cheongrium.com/static/images/spaceinfo/main_space_2.jpg) no-repeat center/cover;}
+        .con ul li:nth-child(3){background: url(https://www.cheongrium.com/static/images/spaceinfo/main_space_3.jpg) no-repeat center/cover;}
+        .con ul li:nth-child(4){background: url(https://www.cheongrium.com/static/images/spaceinfo/main_space_4.jpg) no-repeat center/cover;}
+        .con ul li:nth-child(5){background: url(https://www.cheongrium.com/static/images/spaceinfo/main_space_5.jpg) no-repeat center/cover;}
+        .con ul li:nth-child(6){background: url(https://www.cheongrium.com/static/images/spaceinfo/main_space_6.jpg) no-repeat center/cover;}
+        .con ul li:nth-child(7){background: url(https://www.cheongrium.com/static/images/spaceinfo/main_space_7.jpg) no-repeat center/cover;}
+        .con ul li:nth-child(8){background: url(https://www.cheongrium.com/static/images/spaceinfo/main_space_8.jpg) no-repeat center/cover;}
+
+        #menu1:checked ~ .con ul li:nth-child(1),
+        #menu2:checked ~ .con ul li:nth-child(2),
+        #menu3:checked ~ .con ul li:nth-child(3),
+        #menu4:checked ~ .con ul li:nth-child(4),
+        #menu5:checked ~ .con ul li:nth-child(5),
+        #menu6:checked ~ .con ul li:nth-child(6),
+        #menu7:checked ~ .con ul li:nth-child(7),
+        #menu8:checked ~ .con ul li:nth-child(8)
+        {display: block;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="top">
+            <div class="title">
+                <h1>공간안내</h1>
+                <p>고즈넉한 자연 속 사계절의 아름다운 정취가 있는 청리움의 공간을 안내합니다</p>
+            </div>
+        
+            <input type="radio" name="menu" id="menu1" checked>
+            <input type="radio" name="menu" id="menu2">
+            <input type="radio" name="menu" id="menu3">
+            <input type="radio" name="menu" id="menu4">
+            <input type="radio" name="menu" id="menu5">
+            <input type="radio" name="menu" id="menu6">
+            <input type="radio" name="menu" id="menu7">
+            <input type="radio" name="menu" id="menu8">
+
+            <div class="menu">
+                <label for="menu1">강당동</label>
+                <label for="menu2">연수동</label>
+                <label for="menu3">카페테리아</label>
+                <label for="menu4">잔디마당</label>
+                <label for="menu5">오하산방</label>
+                <label for="menu6">약초원</label>
+                <label for="menu7">명당기도터</label>
+                <label for="menu8">녹차·포도밭</label>
+            </div>
+            <div class="con">
+                <ul>
+                    <li>
+                        <div class="txt">
+                            <p>강당동 (컨퍼런스홀 | 세미나 A·B)</p>
+                            <p>
+                                천혜의 자연 속 프라이빗한 단독 공간으로<br>
+                                교육, 세미나, 연수, 행사 등<br>
+                                다채로운 이벤트를 지원합니다.
+                            </p>
+                            <a href="#">VIEW MORE</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="txt">
+                            <p>연수동</p>
+                            <p>
+                                자연과 조화를 이루는 아늑한 보금자리로<br>
+                                쾌적한 환경의 휴식공간을 제공합니다.
+                            </p>
+                            <a href="#">VIEW MORE</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="txt">
+                            <p>카페테리아</p>
+                            <p>
+                                강당동 1층에 위치한 카페테리아는<br>
+                                청리움이 자랑하는 대표 야외공간입니다.
+                            </p>
+                            <a href="#">VIEW MORE</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="txt">
+                            <p>잔디마당</p>
+                            <p>
+                                호수의 낭만과 푸른 잔디가 펼쳐진<br>
+                                다양한 케이터링 식사 메뉴와 함께<br>
+                                아름다운 풍경을 즐길 수 있습니다.
+                            </p>
+                            <a href="#">VIEW MORE</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="txt">
+                            <p>오하산방</p>
+                            <p>
+                                그림같은 신세와 연못이 있는 너와집<br>
+                                다도 및 촬영장소로 이용되는 전통공간입니다.
+                            </p>
+                            <a href="#">VIEW MORE</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="txt">
+                            <p>약초원</p>
+                            <p>
+                                국내자생 산약초 150여종을 한 자리에서<br>
+                                볼 수 있는 한약 자원의 보고입니다.
+                            </p>
+                            <a href="#">VIEW MORE</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="txt">
+                            <p>명당 기도터</p>
+                            <p>
+                                대길이 모이는 청리움 보리상의 명당으로<br>
+                                큰 뜻을 이루길 기원하는 소원터입니다.
+                            </p>
+                            <a href="#">VIEW MORE</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="txt">
+                            <p>녹차 · 포도밭</p>
+                            <p>
+                                추운 겨울 영하의 온도를 이기고 눈 속에서<br>
+                                피어난 가평 설악의 최초 설록차 재배지입니다.
+                            </p>
+                            <a href="#">VIEW MORE</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
