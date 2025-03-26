@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{margin: 0;padding: 0;}
+      ul{list-style: none;}
+      a{text-decoration: none; color: #000;}
+
+
+      #business{
+        width: 100%;
+        margin: 100px auto;
+      }
+      #business ul{
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        text-align: center;
+
+      }
+      #business ul li{
+        height: 180px;
+        width: 180px;
+        padding-top: 110px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+        cursor: pointer;
+      }
+      #business ul li.on::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        border: 10px solid #f00;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="business">
+      <ul>
+        <li>
+          <a href="#">
+            <span>식품제조/<br />유통</span>
+          </a>
+        </li>
+        <li>
+          <a href="#"> <span>푸드서비스</span></a>
+        </li>
+        <li>
+          <a href="#">
+            <span>프리미엄<br />다이닝</span></a>
+        </li>
+        <li>
+          <a href="#"> <span>베이커리</span></a>
+        </li>
+        <li>
+          <a href="#"> <span>프랜차이즈</span></a>
+        </li>
+        <li>
+          <a href="#"> <span>자회사</span></a>
+        </li>
+      </ul>
+    </div>
+    <script>
+      document.querySelectorAll("#business ul li")[0].classList.add("on");
+
+      function myremove(){
+            document.querySelectorAll("#business ul li").forEach(function(v,k){v.classList.remove("on");}); 
+         };
+      
+      document.querySelectorAll("#business ul li").forEach(function(v, k){
+        v.onclick=function(){
+            myremove();
+            document.querySelectorAll("#business ul li")[k].classList.add("on");
+        };
+    });
+
+      document.querySelectorAll("#business ul li").forEach(function (v, k) {
+        v.style.backgroundImage =
+        "url(https://www.shinsegaefood.com/images/business/bg_business_tab0"
+        +(k + 1)
+        +"_on.png";
+        v.style.backgroundRepeat ="no-repeat";
+        v.style.backgroundPosition ="top";
+      });
+    </script>
+  </body>
+</html>

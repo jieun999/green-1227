@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+
+        body.on{background: rgba(0, 0, 0, 0.8);}
+        p{
+           height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        p a{
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-decoration: none;
+            padding: 20px;
+        }
+        p a.on{
+            background: #fff;
+            color: #000;
+        }
+        #popup{
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid;
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="#">클릭</a></p>
+    <div id="popup">
+        popup
+        <a href="#">close</a>
+    </div>
+
+    <script>
+        document.querySelector("#popup").style.display="none";
+        //일단 팝업창을 만들고 display="none"으로 숨김
+
+        
+        document.querySelector("p a").onclick=function(e) {
+            e.preventDefault();
+            document.querySelector("#popup").style.display="block";
+            this.style.display="none"
+            //클릭을 누르면 팝업이 나오고, 클릭은 숨겨지는 서식
+
+            document.querySelector("#popup a").onclick=function(){
+                e.preventDefault();
+                document.querySelector("#popup").style.display="none";
+                document.querySelector("p a").style.display="block";
+            };
+            //close를 누르면 팝업이 사라지고 클릭이 나오도록 하는 서식
+        }; 
+    </script>
+</body>
+</html>

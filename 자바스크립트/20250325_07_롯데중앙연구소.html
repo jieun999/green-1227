@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{margin: 0;padding: 0;}
+      ul{list-style: none;}
+      a{text-decoration: none;}
+      
+
+      .lotte{
+        width: 100%;
+        margin: 0 auto;
+      }
+      .lotte .top{
+        margin: 50px 0;
+      }
+      .lotte .top ul{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+      .lotte .top ul li{
+        /* width: 200px; */
+        /* padding: 0px 55px; */
+        min-width: 200px;
+        height: 54px;
+        line-height: 54px;
+        font-size: 20px;
+        background: #555;
+        color: #aaa;
+        border-radius: 30px;
+        text-align: center;
+        cursor: pointer;
+      }
+      .lotte .top ul li.active{
+        background: #da291c;
+        color: #fff;
+      }
+
+      .lotte .bot{
+        position: relative;
+      }
+
+      .lotte .bot .con{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+      }
+      .lotte .bot .con.active{
+        display: block;
+      }
+      .lotte .bot .con p{
+        position: relative;
+      }
+      .lotte .bot .con p img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .lotte .bot .con .txt{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      .lotte .bot .con .txt h1{
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lotte">
+        <div class="top">
+            <ul>
+                <li>연구개발</li>
+                <li>기초연구</li>
+                <li>패키지연구</li>
+                <li>기술연구</li>
+                <li>안전관리</li>
+                <li>연구전략</li>
+            </ul>
+        </div>
+        <div class="bot">
+            <div class="con">
+                <p><img src="https://www.lotternd.com/assets/images/sub/research/research-ban1.jpg" alt=""></p>
+                <div class="txt">
+                    <h1>연구개발</h1>
+                    <p>소비자의 니즈와 시장 선호도에 부합하는 신제품을 출시하고 품질을 개선합니다.</p>
+                </div>
+            </div>
+            <div class="con">
+                <p><img src="https://www.lotternd.com/assets/images/sub/research/research-ban2.jpg" alt=""></p>
+                <div class="txt">
+                    <h1>기초연구</h1>
+                    <p>바이오 연구, 신소재 발굴 등 개발의 기틀을 마련하고 신규 솔루션을 개척합니다.</p>
+                </div>
+            </div>
+            <div class="con">
+                <p><img src="https://www.lotternd.com/assets/images/sub/research/research-ban3.jpg" alt=""></p>
+                <div class="txt">
+                    <h1>패키지연구</h1>
+                    <p>제품 포장을 설계하고 디자인하여 품질 유지와 아이덴티티 강화를 이룹니다.</p>
+                </div>
+            </div>
+            <div class="con">
+                <p><img src="https://www.lotternd.com/assets/images/sub/research/research-ban4.jpg" alt=""></p>
+                <div class="txt">
+                    <h1>기술연구</h1>
+                    <p>첨단 기술을 현장에 적용하여 식품 제조 방식의 선진화를 이끕니다.</p>
+                </div>
+            </div>
+            <div class="con">
+                <p><img src="https://www.lotternd.com/assets/images/sub/research/research-ban5.jpg" alt=""></p>
+                <div class="txt">
+                    <h1>안전관리</h1>
+                    <p>위생 관리와 위해 사고 예방을 통해 롯데 식품 및 상품의 안전을 책임집니다.</p>
+                </div>
+            </div>
+            <div class="con">
+                <p><img src="https://www.lotternd.com/assets/images/sub/research/research-ban6.jpg" alt=""></p>
+                <div class="txt">
+                    <h1>연구전략</h1>
+                    <p>진행 방향을 설계하고 실질적 연구 활동을 지원합니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+         document.querySelectorAll(".bot .con")[0].classList.add("active");
+         document.querySelectorAll(".top ul li")[0].classList.add("active");
+
+         function myremove(){
+            document.querySelectorAll(".bot .con").forEach(function(v,k){v.classList.remove("active");}); 
+            document.querySelectorAll(".top ul li").forEach(function(v,k){v.classList.remove("active");}); 
+         };
+
+    document.querySelectorAll(".top ul li").forEach(function(v, k){
+        v.onclick=function(){
+            myremove();
+            document.querySelectorAll(".bot .con")[k].classList.add("active");
+            document.querySelectorAll(".top ul li")[k].classList.add("active");
+        };
+    });
+    </script>
+  </body>
+</html>

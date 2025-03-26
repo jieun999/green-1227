@@ -34,9 +34,8 @@
       .top ul li.active{
         border: 1px solid #211955;
         background: #211955;
-      }
-      .top ul li a.active{
         color: #fff;
+        cursor: pointer;
       }
       .bot {
         position: relative;
@@ -62,12 +61,12 @@
     <div class="hill">
         <div class="top">
             <ul>
-                <li><a href="#">ELLE</a> </li>
-                <li><a href="#">COSMOPOLITAN</a></li>
-                <li><a href="#">Harper’s BAZAAR</a></li>
-                <li><a href="#">ESQUIRE</a></li>
-                <li><a href="#">STUDIO DOT</a></li>
-                <li><a href="#">YEET</a></li>
+                <li>ELLE</li>
+                <li>COSMOPOLITAN</li>
+                <li>Harper’s BAZAAR</li>
+                <li>ESQUIRE</li>
+                <li>STUDIO DOT</li>
+                <li>YEET</li>
             </ul>
         </div>
         <div class="bot">
@@ -100,12 +99,10 @@
     <script>
     document.querySelectorAll(".bot .con")[0].classList.add("active");
     document.querySelectorAll(".top ul li")[0].classList.add("active");
-    document.querySelectorAll(".top ul li a")[0].classList.add("active");
 
     function myremove(){
         document.querySelectorAll(".bot .con").forEach(function(v,k){v.classList.remove("active");}); 
         document.querySelectorAll(".top ul li").forEach(function(v,k){v.classList.remove("active");}); 
-        document.querySelectorAll(".top ul li a").forEach(function(v,k){v.classList.remove("active");}); 
     };
 
     document.querySelectorAll(".top ul li").forEach(function(v, k){
@@ -113,7 +110,6 @@
             myremove();
             document.querySelectorAll(".bot .con")[k].classList.add("active");
             document.querySelectorAll(".top ul li")[k].classList.add("active");
-            document.querySelectorAll(".top ul li a")[k].classList.add("active");
         };
     });
     </script>
