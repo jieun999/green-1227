@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+
+        .lush{
+            width: 1000px;
+            margin: 50px auto;
+        }
+        .lush ul{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 100px;
+        }
+        .lush ul li{
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background-color: rgb(34, 34, 34);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="lush">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    <script>
+        document.querySelectorAll(".lush ul li").forEach(function (v, k) {
+            v.style.backgroundImage =
+            "url(https://weare.lush.co.kr/images/ico_main_value0"
+            +(k + 1)
+            +".svg";
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <script>
+        let str1 = "nice to meetm you";
+        let str2 = new String("nice to meet you");
+
+        document.write(str1.search("m") + "<br>");
+        document.write(str1.search("M") + "<br>");
+        document.write(str1.search(/M/i) + "<br>");
+        document.write(str1.replace("m" , "n") + "<br>");
+        document.write(str1 + "<br>");
+        document.write(str1.replace(/M/i, "n") + "<br>");
+        document.write(str1.replace(/m/g, "n") + "<br>");
+        document.write(str1.replace(/M/gi, "n") + "<br>");
+        //replace=  목록의 토큰을 대체함.
+        //replace(/M/gi, "n") = M을 가진 문자를 gi 모든 문자에서 대소문자 구분없이 "n"으로 변환한다.
+        //g : 전체 모든 문자열 변경 (global)
+        //i : 영문 대소문자를 무시, 모두 일치하는 패턴 검색 (ignore)
+
+        document.write(str1.replaceAll(/M/gi, "n") + "<br>");
+        document.write(str1.indexOf("m") + "<br>");
+        document.write(str1.indexOf("x") + "<br>");
+        document.write(str1.lastIndexOf("m") + "<br>");
+        document.write(str1.match("me") + "<br>");
+        document.write(str1.match("x") + "<br>");
+        document.write(str1.charAt(8) + "<br>");
+        document.write(str1.slice(0, 3) + "<br>");
+        //스타트번호(이상/포함 됨) 엔드번호(미만/포함 안됨)
+        document.write(str1.slice(-3, -1) + "<br>");
+        //스타트번호는 엔드번호보다 작은 숫자여야 함
+        document.write(str1.slice(1) + "<br>");
+        document.write(str1.slice(-3) + "<br>");
+
+        let str3 = "123456-1234567";
+        document.write(str3.replaceAll(str3.slice(8), "******")+"<br>");
+        document.write(str3.replaceAll(str3.slice(8), "*".repeat(6))+"<br>");
+        document.write(str3.substring(0,8)+"<br>");
+        document.write(str3.substring(7)+"<br>");
+        document.write(str3.substring(-3)+"<br>");
+        //substring 메소드는 인수값에 음의값이 입력되면 0으로 처리한다.
+        document.write(str3.substr(0, 5)+"<br>");
+        document.write(str3.substr(0)+"<br>");
+        document.write(str3.substr(-6, 2)+"<br>");
+        document.write(str3.length + "<br>");
+        //length: 공백 구분없이 한개의 문자(공백포함)의 갯수를 도출한다.
+
+        let str4 = "a b c d f";
+        document.write(str4.split(" ", 2) + "<br>");
+        //split: 자바스크립트에서 문자열을 주어진 문자열 구분자나 정규식을 기준으로 나누어 배열로 변환하는데 사용하는 함수
+        document.write(str4.split(" ").length + "<br>");
+        document.write(str4.split(" ")[0] + "<br>");
+    </script>
+</body>
+</html>
