@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{margin: 0;padding: 0;}
+      ul{list-style: none;}
+      a{text-decoration: none; color: rgba(255, 255, 255, 0.4);}
+
+      .wrap{
+        width: 100%;
+        height: 100vh;
+        margin: 50px auto;
+        background-image: url(https://www.samsungshi.com/images/sub/sVisual_01.jpg);
+    }
+      .wrap .title{
+        width: 100%;
+        text-align: center;
+    }
+    .wrap .menu{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin: 50px 0 0;
+    }
+    .wrap .menu li{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .wrap .menu li a{
+        flex: 0 1 70%;
+        border-bottom: 5px solid rgba(255, 255, 255, 0.4);
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        padding: 20px 0; 
+        box-sizing: border-box;
+        transition: 0.5s;
+    }
+    .wrap .menu li a:hover{
+        border-bottom: 5px solid rgba(255, 255, 255, 1);
+        color: rgba(255, 255, 255, 1);
+        padding-right: 50px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+        <div class="title">
+            <h1>제품 | 기술</h1>
+        </div>
+        <ul class="menu">
+            <li><a href="#">제품 | 서비스</a></li>
+            <li><a href="#">그린 솔루션</a></li>
+            <li><a href="#">디지털 솔루션</a></li>
+            <li><a href="#">스마트야드 솔루션</a></li>
+        </ul>
+    </div>
+    <script>
+    </script>
+  </body>
+</html>
