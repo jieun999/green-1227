@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RETAIL CONTENTS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+
+        .retail{
+            max-width: 1260px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .retail .slices{
+            color: #d1a050;
+            font-family: "Archivo", sans-serif;
+        }
+        .retail .slices > h1{
+            font-weight: bold;
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        .retail .slices .list .title > h1{
+            font-size: 42px;
+            margin: 80px 0 20px;
+            font-weight: 500;
+        }
+        .retail .slices .list li{
+            width: 100%;
+            padding: 15px 20px;
+            cursor: pointer;
+            position: relative;
+            border-bottom: 1px solid #d1a050;
+        }
+        .retail .slices .list li .more::before,
+        .retail .slices .list li .more::after{
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 5px;
+            width: 2px;
+            height: 14px;
+            background: #d1a050;
+            transition: 0.5s;
+        }
+        .retail .slices .list li .more::before {
+            transform: rotate(90deg);
+        }
+        .retail .slices .list li strong{
+            font-size: 24px;
+            font-weight: normal;
+            font-size: 24px;
+        }
+        .retail .slices .list .con{
+            height: 0;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+        .retail .slices .list .con div.on{
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="retail">
+        <div class="slices">
+            <h1>RETAIL</h1>
+            <ul class="list">
+                <div class="title">
+                    <h1>Slices - Oat Base</h1>
+                </div>
+                <li>
+                    <p class="more"></p>
+                    <strong>AMERICAN</strong>
+                    <div class="con">
+                        <p>
+                            <img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-AMERICAN-pc.jpg" alt="american">
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <p class="more"></p>
+                    <strong>CHEDDAR</strong>
+                    <div class="con">
+                        <p>
+                            <img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-CHEDDAR-pc.jpg" alt="cheddar">
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <p class="more"></p>
+                    <strong>PEPPER JACK</strong>
+                    <div class="con">
+                        <p>
+                            <img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-PEPPERJACK-pc.jpg" alt="pepper_jack">
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="list">
+                <div class="title">
+                    <h1>Parmesan - Oat Base</h1>
+                </div>
+                <li>
+                    <p class="more"></p>
+                    <strong>GRATED PARMESAN</strong>
+                    <div class="con">
+                        <p>
+                            <img src="https://www.armoredfresh.com/theme/af_v02/layout/_img/parmesan-pc.jpg" alt="parmesan">
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <p class="more"></p>
+                    <strong>GRATED KIMCHI PARMESAN</strong>
+                    <div class="con">
+                        <p>
+                            <img src="https://www.armoredfresh.com/theme/af_v02/layout/_img/parmesan-kimchi-pc.jpg" alt="kimchi">
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll(".list li").forEach(function (v, k) {
+            //querySelector:특정 그룹에서 첫번째에 있는 서식을 선택하는 것(all:그룹 전체, nth-child()와 비슷한 의미. 단독으로 사용 X)
+            //forEach: 서식 전체 호출
+            //function 함수를 만들고 호출할 때 사용 
+            //v(서식ex. ul li, div 등등), k(인덱스 번호)
+            v.querySelector(".con").style.height =0;
+        });
+        document.querySelectorAll(".list li").forEach(function (v, k){
+            v.onclick = function () {
+                let bool = this.querySelector(".con").classList.contains("on");
+                let ht = this.querySelector(".con p img").clientHeight;
+                if (!bool){
+                    this.querySelector(".con").classList.add("on");
+                    this.querySelector(".con").style.height = ht + "px"; 
+                }else{
+                    v.querySelector(".con").style.height =0;
+                    v.querySelector(".con").classList.remove("on");
+                };                
+            };
+        });
+    </script>
+</body>
+</html>
