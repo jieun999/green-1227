@@ -20,7 +20,7 @@
                 if(x>10) throw "is too height"
                 if(x<5) throw "is too low"
                 if(isNaN(x)) throw "is not a number"
-                x=Number(x);
+                x=Number(x); //x=Number라고 선언하는 함수. 숫자 외 문자등이 오면 NaN(오류)로 처리할 수 있게 한다.
                 message.innerHTML = "오류없는 숫자를 입력하였습니다."
             }
             catch(error){

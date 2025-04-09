@@ -16,8 +16,13 @@
     
     <button id="off">Turn off the light</button>
     <script>
+        let light = document.querySelector("img").src;
+        
         document.getElementById("on").onclick=function(){
-            document.querySelector("img").src="https://www.w3schools.com/js/pic_bulbon.gif";
+            let txt = this.id;
+            console.log(txt);
+            document.querySelector("img").src= light.repeat(light.slice(-7, -4),txt);
+            document.querySelector("img").alt=txt;
         };
         document.getElementById("off").onclick=function(){
             document.querySelector("img").src="https://www.w3schools.com/js/pic_bulboff.gif";
