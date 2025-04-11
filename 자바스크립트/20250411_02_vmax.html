@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vmax</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        body{
+        }
+        div{
+            /*
+            width: 50vw;
+            화면(스크린/디바이스) width값에서 50만큼 씀 
+            height: 50vh;
+            화면(스크린/디바이스) height값에서 50만큼 씀 
+            */
+
+            /*
+            width: 50vmax;
+            height: 50vmax;
+            vmax: width나 height의 중 큰 값(뷰포트/디바이스 기준) 크기를 맞춤.
+            */
+
+            /*
+            width: 50vmin;
+            height: 50vmin;
+            vmax: width나 height의 중 작은 값(뷰포트/디바이스 기준) 크기를 맞춤. */
+
+            width: 50vmin;
+            height: 50vmax;
+
+            background: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
