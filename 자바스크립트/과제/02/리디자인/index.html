@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        wrap{
+            width: 100%;
+            height: 100%;
+        }
+
+        .menu{
+            margin-top: 20px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 30;
+            display: flex;
+            justify-content: space-around;
+            align-items:center;
+            padding: 0 60px;
+            box-sizing: border-box;
+        }
+        .menu ul{
+            width: 70%;
+            display: flex;
+            list-style: none;
+            gap: 50px;
+            font-size: 20px;
+            color: #fff;
+            margin: 0 auto;
+            justify-content: center;
+        }
+        .menu ul li{
+            cursor: pointer;
+        }
+        section {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            object-fit: cover;
+        }
+        section::after{
+            width: 100%;
+            height: 204px;
+            content: "";
+            position: absolute;
+            bottom: 0;
+            z-index: 10;
+            background: url(https://www.nie.re.kr/resources/nie/images/main/main-visual-circle_02.png) right 0px / cover no-repeat;
+        }
+        section video{
+            position: relative;
+        }
+        .title{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 45px;
+            color: #fff;
+            animation: move01 1s linear;
+            text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.7);
+        }
+        .scroll{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            z-index: 10;
+            color: #fff;
+            animation: move02 1s linear infinite;
+        }
+
+        @keyframes move01{
+            0%{
+                opacity: 0;
+                filter: blur(50px);
+            }
+            100%{
+                opacity: 1;
+                filter: blur(0px);
+            }
+        }
+        @keyframes move02{
+            0%{bottom: 0px;}
+            50%{bottom: 10px;}
+            100%{bottom: 0px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="menu">
+            <div class="logo"><a href="#"><img src="./img/main_logo2.png" alt=""></a></div>
+            <ul>
+                <li>알림·소통</li>
+                <li>전시</li>
+                <li>교육</li>
+                <li>연구</li>
+                <li>도서출판</li>
+                <li>멸종위기 야생동물</li>
+                <li>습지보전</li>
+                <li>기관소개</li>
+            </ul>
+        </div>
+        <section>
+            <video autoplay muted loop class="bgvid">
+              <source src="https://www.nie.re.kr/resources/nie/video/mainNewVideo.mp4" type="video/mp4"/>
+            </video>
+        </section>
+        <div class="title">
+            <p>국가 자연생태계의 지속가능성, 자연이 주는 풍요로움<br>
+                <strong>국립생태원이 만들어갑니다.</strong></p>
+        </div>
+        <div class="scroll">
+            <p>Scroll Down</p>
+            <p>
+                <img src="https://www.nie.re.kr/resources/nie/images/main/mouse_down.png" alt="">
+            </p>
+        </div>
+    </div>
+</body>
+</html>
