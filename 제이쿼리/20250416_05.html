@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        /* $(function(){
+            $("p").click(function(){
+                $("p").css("color", "#000");
+                $(this).css("color", "#f00");
+            });
+        });*/
+    </script>
+    <style>
+        p{cursor: pointer;}
+        /* .active{color: #f00;} */
+    </style>
+</head>
+<body>
+    <p id="p1">문단태그1</p>
+    <p>문단태그2</p>
+    <p>문단태그3</p>
+    <p>문단태그4</p>
+    <p>문단태그5</p>
+    <script>
+       /* let p = document.querySelectorAll("p")
+        p.forEach(function(v, k, allitem){
+                v.onclick = function(){
+                    allitem.forEach(function(item){
+                        item.style.color = "#000";
+                    });
+                    this.style.color = "#f00";
+                }
+            });*/
+            
+            /*let p = document.querySelectorAll("p")
+            p.forEach((v, k, allitem) => {
+                v.onclick = () => {
+                    allitem.forEach((item) => {
+                        item.style.color = "#000";
+                    });
+                    v.style.color = "#f00";
+                    //function 대신 "=>"를 쓸 경우, this함수를 찾지 못한다.
+                }
+            });*/
+
+            /*$("p").click(function(){
+                $("p").css("color", "#000");
+                $(this).css("color", "#f00");
+            });*/
+            /*$("p").click(() =>{
+                $("p").css("color", "#000");
+                $(event.currentTarget).css("color", "#f00");
+            });*/
+            /*$("p").mouseenter(() =>{
+                $("p").css("color", "#000");
+                $(event.currentTarget).css("color", "#f00");
+            }); //hover동작*/
+            $("p").dblclick(function(){
+                $(this).hide;
+            });
+            $("p").dblclick(function(){
+                $(this).hide();
+            });
+            $("#p1").mouseenter(function(){
+                alert("You entered p1!");
+            });
+        /*function my(){
+            document.querySelectorAll("p").forEach(function(v,k){
+                v.classList.remove("active");
+            })
+        };
+        document.querySelectorAll("p").forEach(function(v, k){
+            v.onclick=function(){
+                my();
+                v.classList.add("active");
+            };
+        })*/
+    </script>
+</body>
+</html>
