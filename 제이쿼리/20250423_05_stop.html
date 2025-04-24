@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        p#move{
+            position: relative;
+            /* 요소는 기본적으로 static 포지션을 가지고 있기 때문에 제이쿼리에서 animate 속성이 먹히지 않는다.
+            때문에 포지션을 릴렉티브나 앱솔루트로 바꿔준다.  */
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #ccc;
+        }
+
+    </style>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script>
+        $(function(){
+            $("#btn").click(function(){
+                $("p#move")
+                .animate({ left : "500px"}, 2000)
+                .animate({top:"500px"},2000);
+            });
+            $("#stop1").click(function(){
+                $("p#move").stop(true,true); //stop(클리어, 점프)
+            });
+            $("#stop2").click(function(){
+                $("p#move").stop(true,false);
+            });
+            $("#stop3").click(function(){
+                $("p#move").stop(false,true);
+            });
+            /*$("#stop4").click(function(){
+                $("p#move").stop(false,false);
+            });*/
+            $("#stop4").click(function(){
+                $("p#move").stop();
+            });
+        });
+    </script>
+  </head>
+  <body>
+    <p id="move"></p>
+    <button id="btn">시작</button>
+    <button id="stop1">true/true</button>
+    <button id="stop2">true/false</button>
+    <button id="stop3">false/true</button>
+    <button id="stop4">false/false</button>
+  </body>
+</html>

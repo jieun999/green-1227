@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        p#move{
+            position: relative;
+            /* 요소는 기본적으로 static 포지션을 가지고 있기 때문에 제이쿼리에서 animate 속성이 먹히지 않는다.
+            때문에 포지션을 릴렉티브나 앱솔루트로 바꿔준다.  */
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #ccc;
+        }
+
+        #draggable { width: 150px; height: 150px; padding: 0.5em; border: 1px solid;}
+    </style>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script>
+        $(function(){
+            $("a").click(function(e){
+                //a를 click하면 실행구문(function) 여기에선 a를 클릭하면 p가 움직여야하기 때문에 실행구문을 열고 선택자(&)로 p를 지정한다.
+                //function(e){e.preventDefault()}는 a태그를 눌렀을 때 링크(#)으로 가지 않게 하는 실행구문이다.
+                e.preventDefault();
+                $("p#move")
+                .animate({ left : "500px"}, 1000, "linear")
+                .animate({ top:"500px", backgroundColor:"#f00"}, 1000, "easeOutElastic")
+                .animate({ left : "0"}, 1000, "swing")
+                .animate({ top : "0", backgroundColor:"#ccc"}, 1000, "easeOutBounce")
+            });
+            
+            $("a").trigger("click");
+            
+            setInterval(function(){
+                $("a").click();
+            },4000);
+            //setInterval= 반복동작. 해석하자면 a를 클릭했을 때 4000(4s)동안 계속 클릭하도록 만들어준다.
+
+            $(function(){
+                $( "#draggable" ).draggable();
+            });
+        });
+    </script>
+  </head>
+  <body>
+    <p id="move"></p>
+    <a href="#">클릭</a>
+
+    <div id="draggable" class="ui-widget-content">
+        <p>Drag me around</p>
+    </div>
+  </body>
+</html>
