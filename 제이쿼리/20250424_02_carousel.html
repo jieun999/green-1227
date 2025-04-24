@@ -24,13 +24,23 @@
         margin: 100px auto;
         display: flex;
         align-items: center;
-
         background: url(https://www.skinnovation.com/resources/images/main/s4-bg.jpg)
           center/cover;
         font-family: "SUIT", sans-serif;
+        
+        
+      }
+      #canvas{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
       .left {
         width: 40%;
+        position: relative;
+        z-index: 1;
       }
       .right {
         width: 60%;
@@ -127,20 +137,23 @@
       $(function () {
         let totalItem = $(".inner .item").length;
         let degPerItem = 360 / totalItem;
-
         $(".item").each(function (index, element) {
           $(element).css(
             "transform",
             `rotateY(${index * degPerItem}deg) translateZ(320px)`
           );
         });
-        $(".left ul li a").click(function(){
-          $(".right .sk .inner").css("transform",`rotateY(${(y -= 60)}deg`);
+        $(".left ul li").click(function (e) {
+          e.preventDefault();
+          let i = $(this).index();
+          let y = -i * degPerItem;
+          $(".inner").css("transform", `rotateY(${y}deg)`);
         });
       });
     </script>
   </head>
   <body>
+    <canvas id="canvas"></canvas>
     <section>
       <div class="left">
         <ul>
@@ -312,5 +325,73 @@
         </div>
       </div>
     </section>
+    <script>
+      const canvas = document.getElementById('canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+  
+      const leafImage = new Image();
+      leafImage.src = './img/leaves.png';
+  
+      const leaves = [];
+  
+      function createLeaf() {
+        const size = 20 + Math.random() * 30;
+        leaves.push({
+          x: canvas.width + Math.random() * 200,
+          y: Math.random() * canvas.height,
+          size: size,
+          speedX: 1 + Math.random() * 2,
+          speedY: -0.5 + Math.random() * 1,
+          angle: Math.random() * 360,
+          angleSpeed: -2 + Math.random() * 4,
+        });
+      }
+  
+      function updateLeaves() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (let i = leaves.length - 1; i >= 0; i--) {
+          const leaf = leaves[i];
+  
+          // 회전 및 위치 업데이트
+          leaf.x -= leaf.speedX;
+          leaf.y += leaf.speedY;
+          leaf.angle += leaf.angleSpeed;
+  
+          // 캔버스 밖으로 나가면 제거
+          if (leaf.x + leaf.size < 0) {
+            leaves.splice(i, 1);
+            continue;
+          }
+  
+          // 회전하며 그리기
+          ctx.save();
+          ctx.translate(leaf.x, leaf.y);
+          ctx.rotate((leaf.angle * Math.PI) / 180);
+          ctx.drawImage(leafImage, -leaf.size / 2, -leaf.size / 2, leaf.size, leaf.size);
+          ctx.restore();
+        }
+      }
+  
+      function animate() {
+        updateLeaves();
+        requestAnimationFrame(animate);
+      }
+  
+      // 일정 주기로 나뭇잎 생성
+      setInterval(createLeaf, 1000);
+  
+      // 이미지 로드 후 애니메이션 시작
+      leafImage.onload = () => {
+        animate();
+      };
+  
+      // 리사이즈 대응
+      window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      });
+    </script>
   </body>
 </html>
