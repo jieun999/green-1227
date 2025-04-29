@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <!-- gsap이라는 자바스크립트 라이브러리를 사용했으므로, 링크는 꼭 가져와야한다. -->
+
+    <!-- 
+        duration(지속): 애니메이션 지속 시간(초) 기본값: 0.5
+        delay(지연):애니메이션이 시작되기 전 지연 시간(초)
+        repeat(반복): 애니메이션을 몇 번 반복해야 하나요?
+        yoyo: true인 경우, 반복할 때마다 트윈이 반대 방향으로 실행됩니다(요요처럼). 기본값: false
+        stagger: 각 타겟의 애니메이션 시작 사이의 시간(초)(여러 타겟이 제공된 경우)
+        ease: 애니메이션의 변화 속도를 제어합니다. 동작의 "개성"이나 느낌과 같은 요소입니다. 기본값: "power1.out"
+        onComplete: 애니메이션이 완료되면 실행되는 함수
+     -->
+    <style>
+        .box{
+            width: 50px;
+            height: 50px;
+        }
+        .green{background: green;}
+    </style>
+</head>
+<body>
+    <div class="box green"></div>
+    
+    <script>
+        let btn = gsap.to(".green", {scale: 0.5, repeat: -1, yoyo:true, paused: true });
+
+        document.querySelector(".green").mouseenter=function(){
+            btn.restart();
+        };
+        document.querySelector(".green").mouseleave=function(){
+            btn.pause();
+        };
+    </script>
+</body>
+</html>

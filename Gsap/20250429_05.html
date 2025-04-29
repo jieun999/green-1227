@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <!-- gsap이라는 자바스크립트 라이브러리를 사용했으므로, 링크는 꼭 가져와야한다. -->
+    <style>
+        .box{
+            width: 50px;
+            height: 50px;
+        }
+        .green{background: green;}
+    </style>
+</head>
+<body>
+    <div class="box green"></div>
+    
+    <script>
+        function myfnc(){
+            alert("애니메이션 끝");
+        }
+        gsap.to(".green", {x: 500, duration: 6, repeat: 2, repeatDelay: 3, onComplete: myfnc});
+        //repeatDelay 반복 실행문 시작 전 대기 시간
+    </script>
+</body>
+</html>
