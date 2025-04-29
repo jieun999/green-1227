@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <style>
+        .box{
+            width: 50px;
+            height: 50px;
+        }
+        .green{background: green;}
+        .red{background: red;}
+        .blue{background: blue;}
+    </style>
+</head>
+<body>
+    <div class="box green"></div>
+    <div class="box red"></div>
+    <div class="box blue"></div>
+
+    <script>
+        var tl = gsap.timeline({});
+        tl.to(".green", {x: 500, duration: 2})
+        .to(".red",{x: 500, duration: 2})
+        .to(".blue",{x: 500, duration: 2});
+        //timeline: 한 동작이 끝나면 다른 요소가 그 다음에 움직이도록 할 수 있다.(굳이 딜레이를 일일히 넣지 않아도 됨.)
+
+        /*var tl = gsap.timeline({duration: 2});
+        tl.to(".green", {x: 500})
+        .to(".red",{x: 500})
+        .to(".blue",{x: 500});
+        //timeline안에 duration을 넣으면 요소 하나의 실행시간이 아닌, 요소의 총 실행시간으로 들어간다.*/
+    </script>
+</body>
+</html>
