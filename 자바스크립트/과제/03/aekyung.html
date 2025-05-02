@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aekyung</title>
+    <style>
+        *{margin: 0;padding: 0;}
+
+        .aekyung{
+            width: 1500px;
+            margin: 0px auto;
+            padding: 50px 50px 140px;
+            
+        }
+        .tap{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ccc;
+            padding: 20px 0;
+            box-sizing: border-box;
+            margin: 40px 0;
+            
+        }
+        .tap .right{
+            display: flex;
+            text-align: right;
+            gap: 50px;
+            
+        }
+        .tap .right div{
+            cursor: pointer;   
+        }
+        .tap .right div h3{
+            border-bottom: 2px solid rgba(0, 0, 0, 0);
+            display: inline;
+        }
+        .tap .right div h3.on{
+            border-bottom: 2px solid rgba(0, 0, 0, 1);
+        }
+        .con {
+            width: 100%;
+            position: relative;
+        }
+        .con > div{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            opacity: 0;
+            position: absolute;
+        }
+        .con > div.on{
+            opacity: 1;
+        }
+        .txt{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .txt p{
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .txt a{
+            width: 173px;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 16px;
+            background-color: #eee;
+            border-radius: 50px;
+            text-decoration: none;
+            color: #000;
+            position: absolute;
+            top: 200px;
+        }
+        .con > div p img{
+            width: 900px;
+        }
+    </style>
+</head>
+<body>
+    <div class="aekyung">
+        <div class="tap">
+            <h1 class="left">
+                Sustainable <br>
+                Love & Respect
+            </h1>
+            <div class="right">
+                <div>
+                    <p>Environmental</p>
+                    <h3>환경</h3>
+                </div>
+                <div>
+                    <p>Social</p>
+                    <h3>사회</h3>
+                </div>
+                <div>
+                    <p>Governance</p>
+                    <h3>지배구조</h3>
+                </div>
+            </div>
+        </div>
+        <div class="con">
+            <div>
+                <div class="txt">
+                    <p>
+                        애경산업은 지속가능한 환경을 위해 <br>
+                        책임을 다하겠습니다.
+                    </p>
+                    <a href="#"><span>바로가기</span> <img src="https://www.aekyung.co.kr/img/front/sub/sustainable/report/arrow_link.webp" alt=""></a>
+                </div>
+                <p><img src="https://www.aekyung.co.kr/img/front/main/mo_main_tab01.png" alt=""></p>
+            </div>
+            <div>
+                <div class="txt">
+                    <p>
+                        애경산업의 노력은<br>
+                        임직원과 협력사, 지역사회<br>
+                        그리고 고객이 함께하는 향기로운 동행이 될 것입니다.
+                    </p>
+                    <a href="#"><span>바로가기</span> <img src="https://www.aekyung.co.kr/img/front/sub/sustainable/report/arrow_link.webp" alt=""></a>
+                </div>
+                <p><img src="https://www.aekyung.co.kr/img/front/main/mo_main_tab02.png" alt=""></p>
+            </div>
+            <div>
+                <div class="txt">
+                    <p>투명하고 건전한 기업 활동을 이어나가겠습니다.</p>
+                    <a href="#"><span>바로가기</span> <img src="https://www.aekyung.co.kr/img/front/sub/sustainable/report/arrow_link.webp" alt=""></a>
+                </div>
+                <p><img src="https://www.aekyung.co.kr/img/front/main/mo_main_tab03.png" alt=""></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".con > div")[0].classList.add("on");
+        document.querySelectorAll(".tap .right div h3")[0].classList.add("on");
+        
+        function remove(){
+            document.querySelectorAll(".con > div").forEach(function(v,k){v.classList.remove("on");});
+            document.querySelectorAll(".tap .right div h3").forEach(function(v,k){v.classList.remove("on");});
+         };
+        document.querySelectorAll(".tap .right > div").forEach(function(v, k){
+        v.onclick=function(){
+            remove();
+            document.querySelectorAll(".con > div")[k].classList.add("on");
+            document.querySelectorAll(".tap .right div h3")[k].classList.add("on");
+        };
+    });
+
+    </script>
+</body>
+</html>
